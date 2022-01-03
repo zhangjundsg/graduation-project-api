@@ -35,3 +35,15 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstr
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Model.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Model.pdb
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Model.xml
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll

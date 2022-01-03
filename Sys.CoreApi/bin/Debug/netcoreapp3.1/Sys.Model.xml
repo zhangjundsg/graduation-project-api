@@ -4,6 +4,21 @@
         <name>Sys.Model</name>
     </assembly>
     <members>
+        <member name="P:Sys.Model.LoginRequestDto.UserName">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Sys.Model.LoginRequestDto.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Sys.Model.LoginRequestDto.Code">
+            <summary>
+            验证码
+            </summary>
+        </member>
         <member name="P:Sys.Model.UserInfo.ID">
             <summary>
             学生id

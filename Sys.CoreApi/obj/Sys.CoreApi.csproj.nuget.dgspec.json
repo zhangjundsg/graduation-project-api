@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[7.2.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.22, )"
+            },
             "Microsoft.Extensions.PlatformAbstractions": {
               "target": "Package",
               "version": "[1.1.0, )"
@@ -116,7 +120,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\设计\\Sys.Model\\Sys.Model.csproj": {
+                "projectPath": "E:\\设计\\Sys.Model\\Sys.Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -186,6 +194,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -248,6 +262,16 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Options": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.15.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

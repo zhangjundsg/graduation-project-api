@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace Sys.CoreApi.SetUpApiService
@@ -30,6 +31,34 @@ namespace Sys.CoreApi.SetUpApiService
                 // 获取Model xml注释文件的目录
                 var xmlPathModel = Path.Combine(AppContext.BaseDirectory, "Sys.Model.xml");
                 c.IncludeXmlComments(xmlPathModel, true);
+                //添加设置Token的按钮
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "Value: Bearer {token}",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+
+                //添加Jwt验证设置
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                    {
+                        {
+                            new OpenApiSecurityScheme
+                            {
+                                Reference = new OpenApiReference
+                                {
+                                    Type = ReferenceType.SecurityScheme,
+                                    Id = "Bearer"
+                                },
+                                Scheme = "oauth2",
+                                Name = "Bearer",
+                                In = ParameterLocation.Header,
+                            },
+                            new List<string>()
+                        }
+                    });
             });
 
         }

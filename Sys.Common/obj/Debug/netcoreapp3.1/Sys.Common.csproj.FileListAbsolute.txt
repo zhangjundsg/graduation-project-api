@@ -1,0 +1,10 @@
+E:\设计\Sys.Common\bin\Debug\netcoreapp3.1\Sys.Common.deps.json
+E:\设计\Sys.Common\bin\Debug\netcoreapp3.1\Sys.Common.dll
+E:\设计\Sys.Common\bin\Debug\netcoreapp3.1\Sys.Common.pdb
+E:\设计\Sys.Common\obj\Debug\netcoreapp3.1\Sys.Common.csproj.AssemblyReference.cache
+E:\设计\Sys.Common\obj\Debug\netcoreapp3.1\Sys.Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\设计\Sys.Common\obj\Debug\netcoreapp3.1\Sys.Common.AssemblyInfoInputs.cache
+E:\设计\Sys.Common\obj\Debug\netcoreapp3.1\Sys.Common.AssemblyInfo.cs
+E:\设计\Sys.Common\obj\Debug\netcoreapp3.1\Sys.Common.csproj.CoreCompileInputs.cache
+E:\设计\Sys.Common\obj\Debug\netcoreapp3.1\Sys.Common.dll
+E:\设计\Sys.Common\obj\Debug\netcoreapp3.1\Sys.Common.pdb

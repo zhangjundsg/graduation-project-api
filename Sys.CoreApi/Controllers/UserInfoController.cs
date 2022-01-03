@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Sys.Model;
 
 namespace Sys.CoreApi.Controllers
@@ -8,6 +9,7 @@ namespace Sys.CoreApi.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserInfoController : ControllerBase
     {
         [HttpGet]

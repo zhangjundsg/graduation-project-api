@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kvENQSMoXfsjWTMLFTFXGuv2FLXj9YtgfwntOM645tOV0Kn0GLYKQcqFJ7H7vX3D/a0egyN3sIu5BQerg+EAjA==",
+  "dgSpecHash": "VLBEFIXc7goZxA36InYZgaKnI2Sw5LjIFW/QCB/XG94+WcDWfbUPHjC+3d3/uhLMB47tjC51WnC2o1FUmdAHoA==",
   "success": true,
   "projectFilePath": "E:\\设计\\Sys.IService\\Sys.IService.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\zhang\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
