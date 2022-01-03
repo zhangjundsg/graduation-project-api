@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "3f153cef-dbc2-450e-aad3-18ed3db6c872": {
+      "ProjectGuid": "3f153cef-dbc2-450e-aad3-18ed3db6c872",
+      "DisplayName": "Sys.CoreApi",
+      "ColorIndex": 0
+    },
+    "c0bf0f28-fc34-47c1-835f-96c344effd85": {
+      "ProjectGuid": "c0bf0f28-fc34-47c1-835f-96c344effd85",
+      "DisplayName": "Sys.Model",
+      "ColorIndex": 1
+    },
+    "937abcd7-4025-4939-887f-ab7982239f63": {
+      "ProjectGuid": "937abcd7-4025-4939-887f-ab7982239f63",
+      "DisplayName": "Sys.Common",
+      "ColorIndex": 2
+    },
+    "15da8fc7-da2e-4de7-b0e0-70a538292b74": {
+      "ProjectGuid": "15da8fc7-da2e-4de7-b0e0-70a538292b74",
+      "DisplayName": "Sys.IService",
+      "ColorIndex": 3
+    },
+    "29c808b9-6432-420c-bacc-95bb08ff395d": {
+      "ProjectGuid": "29c808b9-6432-420c-bacc-95bb08ff395d",
+      "DisplayName": "Sys.Service",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
