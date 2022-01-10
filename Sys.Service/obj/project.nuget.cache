@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Xl50PRou/n9DCxVvzjdTdlSa/pFhY2OrlRUOYhvu/sWw2EFlC4JarZSh0BMZfcY1htK4/wNbLtZm30mVR/nfSA==",
+  "dgSpecHash": "aR34+G+SP2bcALyYiB1qBrSpTRBLigQTtLrPZ76f9nZnF95DRAP7H0Xh66hM1HpcCX3qUM41iN917Ge8XyEsqw==",
   "success": true,
   "projectFilePath": "E:\\设计\\Sys.Service\\Sys.Service.csproj",
   "expectedPackageFiles": [
@@ -11,7 +11,9 @@
     "C:\\Users\\zhang\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.15.0\\microsoft.identitymodel.jsonwebtokens.6.15.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\microsoft.identitymodel.logging\\6.15.0\\microsoft.identitymodel.logging.6.15.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.15.0\\microsoft.identitymodel.tokens.6.15.0.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.0\\system.identitymodel.tokens.jwt.6.15.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"

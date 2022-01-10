@@ -10,6 +10,7 @@ namespace Sys.CoreApi.AutoFuc
         {
             builder.RegisterType<UserInfoService>().As<IUserInfoService>(); 
             builder.RegisterType<AuthenticateService>().As<IAuthenticateService>(); 
+            builder.RegisterType<Captcha>().As<ICaptcha>(); 
         }
     }
 }

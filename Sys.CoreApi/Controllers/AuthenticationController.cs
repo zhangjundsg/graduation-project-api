@@ -5,6 +5,9 @@ using Sys.Model;
 
 namespace Sys.CoreApi.Controllers
 {
+    /// <summary>
+    /// 登录认证
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class AuthenticationController : ControllerBase
@@ -24,7 +27,13 @@ namespace Sys.CoreApi.Controllers
             }
             if (_authenticateService.IsAuthenticated(req, out string token))
             {
-                return Ok(token);
+                TokenResponse obj = new TokenResponse()
+                {
+                    TokenHeader = "Bearer",
+                    Msg = "登录成功",
+                    Token = token
+                };
+                return Ok(obj) ;
             }
             return BadRequest("验证失败！");
 

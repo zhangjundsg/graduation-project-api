@@ -4,6 +4,16 @@
         <name>Sys.CoreApi</name>
     </assembly>
     <members>
+        <member name="T:Sys.CoreApi.Controllers.AuthenticationController">
+            <summary>
+            登录认证
+            </summary>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.CaptchaController">
+            <summary>
+            验证码
+            </summary>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.UserInfoController">
             <summary>
             用户信息

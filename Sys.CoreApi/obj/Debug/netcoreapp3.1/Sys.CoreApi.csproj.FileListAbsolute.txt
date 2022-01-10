@@ -47,3 +47,8 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInj
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.1\System.Drawing.Common.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Drawing.Common.dll
