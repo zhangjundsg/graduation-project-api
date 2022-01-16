@@ -7,6 +7,7 @@ namespace Sys.Model
 {
     public class TokenManagement
     {
+       
         [JsonProperty("secret")]
         public string Secret { get; set; }
         [JsonProperty("issuer")]

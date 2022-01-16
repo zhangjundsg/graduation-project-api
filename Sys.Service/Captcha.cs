@@ -84,14 +84,12 @@ namespace Sys.Service
             var temp = -1;
 
             var captcheCode = string.Empty;
-
             for (int i = 0; i < codeLength; i++)
             {
                 if (temp != -1)
                     random = new Random(i * temp * unchecked((int)DateTime.Now.Ticks));
 
                 var index = random.Next(array.Length);
-
                 if (temp != -1 && temp == index)
                     return GenerateRandomCaptchaAsync(codeLength);
 
@@ -99,7 +97,6 @@ namespace Sys.Service
 
                 captcheCode += array[index];
             }
-
             return Task.FromResult(captcheCode);
         }
     }

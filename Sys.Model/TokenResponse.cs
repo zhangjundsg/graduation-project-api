@@ -7,6 +7,8 @@ namespace Sys.Model
 {
     public class TokenResponse
     {
+        [JsonProperty("code")]
+        public int Code { get; set; }
         [JsonProperty("tokenheader")]
         public string TokenHeader { get; set; }
         [JsonProperty("token")]

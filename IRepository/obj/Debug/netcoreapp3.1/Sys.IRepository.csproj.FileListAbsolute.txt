@@ -1,0 +1,10 @@
+E:\设计\IRepository\bin\Debug\netcoreapp3.1\Sys.IRepository.deps.json
+E:\设计\IRepository\bin\Debug\netcoreapp3.1\Sys.IRepository.dll
+E:\设计\IRepository\bin\Debug\netcoreapp3.1\Sys.IRepository.pdb
+E:\设计\IRepository\obj\Debug\netcoreapp3.1\Sys.IRepository.csproj.AssemblyReference.cache
+E:\设计\IRepository\obj\Debug\netcoreapp3.1\Sys.IRepository.GeneratedMSBuildEditorConfig.editorconfig
+E:\设计\IRepository\obj\Debug\netcoreapp3.1\Sys.IRepository.AssemblyInfoInputs.cache
+E:\设计\IRepository\obj\Debug\netcoreapp3.1\Sys.IRepository.AssemblyInfo.cs
+E:\设计\IRepository\obj\Debug\netcoreapp3.1\Sys.IRepository.csproj.CoreCompileInputs.cache
+E:\设计\IRepository\obj\Debug\netcoreapp3.1\Sys.IRepository.dll
+E:\设计\IRepository\obj\Debug\netcoreapp3.1\Sys.IRepository.pdb

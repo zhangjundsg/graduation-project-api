@@ -29,6 +29,7 @@ namespace Sys.CoreApi.Controllers
             {
                 TokenResponse obj = new TokenResponse()
                 {
+                    Code = (int)ResponseCode.Success,
                     TokenHeader = "Bearer",
                     Msg = "登录成功",
                     Token = token

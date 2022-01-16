@@ -17,14 +17,23 @@
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.22" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IRepository\Sys.IRepository.csproj" />
+    <ProjectReference Include="..\Repository\Sys.Repository.csproj" />
     <ProjectReference Include="..\Sys.IService\Sys.IService.csproj" />
     <ProjectReference Include="..\Sys.Model\Sys.Model.csproj" />
     <ProjectReference Include="..\Sys.Service\Sys.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 

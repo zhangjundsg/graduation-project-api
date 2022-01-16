@@ -64,6 +64,7 @@ namespace Sys.CoreApi
 
             //×¢²áswagger·þÎñ
             services.AddSwaggerSetup();
+            
         }
         //autofuc×¢²á
         public void ConfigureContainer(ContainerBuilder builder)
