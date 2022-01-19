@@ -1644,6 +1644,7 @@
       "Sys.Service/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Options": "6.0.0",
+          "Sys.IRepository": "1.0.0",
           "Sys.IService": "1.0.0",
           "System.Drawing.Common": "6.0.0",
           "System.IdentityModel.Tokens.Jwt": "6.15.0"

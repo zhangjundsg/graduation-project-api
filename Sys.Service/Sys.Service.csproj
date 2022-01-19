@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\IRepository\Sys.IRepository.csproj" />
     <ProjectReference Include="..\Sys.IService\Sys.IService.csproj" />
   </ItemGroup>
 

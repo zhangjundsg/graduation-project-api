@@ -178,6 +178,16 @@
           }
         }
       },
+      "Sys.IRepository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Sys.IRepository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sys.IRepository.dll": {}
+        }
+      },
       "Sys.IService/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -605,6 +615,11 @@
         "version.txt"
       ]
     },
+    "Sys.IRepository/1.0.0": {
+      "type": "project",
+      "path": "../IRepository/Sys.IRepository.csproj",
+      "msbuildProject": "../IRepository/Sys.IRepository.csproj"
+    },
     "Sys.IService/1.0.0": {
       "type": "project",
       "path": "../Sys.IService/Sys.IService.csproj",
@@ -619,6 +634,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Microsoft.Extensions.Options >= 6.0.0",
+      "Sys.IRepository >= 1.0.0",
       "Sys.IService >= 1.0.0",
       "System.Drawing.Common >= 6.0.0",
       "System.IdentityModel.Tokens.Jwt >= 6.15.0"
@@ -656,6 +672,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "E:\\设计\\IRepository\\Sys.IRepository.csproj": {
+              "projectPath": "E:\\设计\\IRepository\\Sys.IRepository.csproj"
+            },
             "E:\\设计\\Sys.IService\\Sys.IService.csproj": {
               "projectPath": "E:\\设计\\Sys.IService\\Sys.IService.csproj"
             }

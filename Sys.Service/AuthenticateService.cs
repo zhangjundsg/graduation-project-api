@@ -7,15 +7,19 @@ using System.Security.Claims;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
+using Sys.IRepository;
+using Sys.Model.DBModel;
 
 namespace Sys.Service
 {
     public class AuthenticateService : IAuthenticateService
     {
         private readonly TokenManagement _tokenManagement;
-        public AuthenticateService(IOptions<TokenManagement> tokenManagement)
+        private readonly IUserLogin _userLogin;
+        public AuthenticateService(IOptions<TokenManagement> tokenManagement, IUserLogin userLogin)
         {
             _tokenManagement = tokenManagement.Value;
+            _userLogin = userLogin;
         }
         public bool IsAuthenticated(LoginRequestDto request, out string token)
         {
@@ -37,7 +41,16 @@ namespace Sys.Service
 
         public bool IsValid(LoginRequestDto req)
         {
-            return true;
+             var a = _userLogin.QueryUser<LoginRequestDto>(req);
+            if (a!=null)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
     }
 }

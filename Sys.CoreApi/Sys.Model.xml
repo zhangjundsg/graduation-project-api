@@ -4,6 +4,11 @@
         <name>Sys.Model</name>
     </assembly>
     <members>
+        <member name="T:Sys.Model.DBModel.UserInformation">
+            <summary>
+            UserInformation表
+            </summary>
+        </member>
         <member name="P:Sys.Model.LoginRequestDto.UserName">
             <summary>
             账号
