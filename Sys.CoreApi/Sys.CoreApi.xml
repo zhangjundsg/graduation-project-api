@@ -14,6 +14,16 @@
             验证码
             </summary>
         </member>
+        <member name="T:Sys.CoreApi.Controllers.MenuController">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.GetMenuList">
+            <summary>
+            获取菜单列表
+            </summary>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.UserInfoController">
             <summary>
             用户信息

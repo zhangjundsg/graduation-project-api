@@ -598,11 +598,27 @@
       "Sys.IRepository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Sys.Model": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Sys.IRepository.dll": {}
         },
         "runtime": {
           "bin/placeholder/Sys.IRepository.dll": {}
+        }
+      },
+      "Sys.Model/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "bin/placeholder/Sys.Model.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sys.Model.dll": {}
         }
       }
     }
@@ -1725,6 +1741,11 @@
       "type": "project",
       "path": "../IRepository/Sys.IRepository.csproj",
       "msbuildProject": "../IRepository/Sys.IRepository.csproj"
+    },
+    "Sys.Model/1.0.0": {
+      "type": "project",
+      "path": "../Sys.Model/Sys.Model.csproj",
+      "msbuildProject": "../Sys.Model/Sys.Model.csproj"
     }
   },
   "projectFileDependencyGroups": {

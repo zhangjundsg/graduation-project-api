@@ -15,6 +15,7 @@ namespace Sys.CoreApi.AutoFuc
             builder.RegisterType<Captcha>().As<ICaptcha>(); 
             builder.RegisterType<BaseRepository>().As<IBaseRepository>();
             builder.RegisterType<UserLogin>().As<IUserLogin>();
+            builder.RegisterType<Menu>().As<IMenu>();
         }
     }
 }

@@ -31,7 +31,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\设计\\Sys.Model\\Sys.Model.csproj": {
+                "projectPath": "E:\\设计\\Sys.Model\\Sys.Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

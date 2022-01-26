@@ -1598,6 +1598,9 @@
         }
       },
       "Sys.IRepository/1.0.0": {
+        "dependencies": {
+          "Sys.Model": "1.0.0"
+        },
         "runtime": {
           "Sys.IRepository.dll": {}
         },

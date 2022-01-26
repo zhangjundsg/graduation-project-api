@@ -476,8 +476,19 @@
         }
       },
       "Sys.IRepository/1.0.0": {
+        "dependencies": {
+          "Sys.Model": "1.0.0"
+        },
         "runtime": {
           "Sys.IRepository.dll": {}
+        }
+      },
+      "Sys.Model/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "Sys.Model.dll": {}
         }
       }
     }
@@ -816,6 +827,11 @@
       "sha512": ""
     },
     "Sys.IRepository/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sys.Model/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
