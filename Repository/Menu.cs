@@ -8,37 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using Dapper;
 using System.Linq;
+using Sys.Common;
 
 namespace Sys.Repository
 {
-    public class Menu : IMenu
+    public class Menu : BaseRepository,IMenu
     {
-        public Task<T> DeleteById<T>(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<T> Insert<T>(T model)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<MenuInformation> MenuList()
         {
-            using (IDbConnection conn = DbConnection.SqlConnection())
+            using (IDbConnection conn = DbConnection.SqlConnection(AppConfigurtaion.GetSectionValue("SqlServer")))
             {
-                return conn.QueryAsync<MenuInformation>("getMenuList", commandType: CommandType.StoredProcedure).Result.ToList();
+                return conn.Query<MenuInformation>("getMenuList", commandType: CommandType.StoredProcedure);
             }
         }
 
-        public Task<T> QueryById<T>(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<T> Update<T>(T model)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

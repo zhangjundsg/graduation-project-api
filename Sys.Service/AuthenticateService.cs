@@ -41,16 +41,8 @@ namespace Sys.Service
 
         public bool IsValid(LoginRequestDto req)
         {
-             var a = _userLogin.QueryUser<LoginRequestDto>(req);
-            if (a!=null)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            
+            return true;
+
         }
     }
 }

@@ -7,11 +7,10 @@ namespace Sys.Repository.DbHelper
    
     public class DbConnection
     {
-        private static readonly string sqlConnectionStr = AppConfigurtaion.GetSectionValue("SqlServer");
         private static IDbConnection _dbConnection;
         private static readonly object locker=new object();
         private DbConnection() { }
-        public static IDbConnection SqlConnection()
+        public static IDbConnection SqlConnection(string ConnectionStr)
         {
             if (_dbConnection == null)
             {
@@ -19,7 +18,7 @@ namespace Sys.Repository.DbHelper
                 {
                     if (_dbConnection == null)
                     {
-                        _dbConnection = new SqlConnection(sqlConnectionStr);
+                        _dbConnection = new SqlConnection(ConnectionStr);
                     }
                 }
             }

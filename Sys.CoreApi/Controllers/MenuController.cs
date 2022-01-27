@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Sys.IRepository;
-using Sys.Model.DBModel;
-using System.Collections.Generic;
-using System.Linq;
+using Sys.IService;
 
 namespace Sys.CoreApi.Controllers
 {
@@ -15,19 +12,19 @@ namespace Sys.CoreApi.Controllers
     [Authorize]
     public class MenuController : Controller
     {
-        private readonly IMenu _menu;
-        public MenuController(IMenu menu) 
+        private readonly IMenuList _menuList;
+        public MenuController(IMenuList menuList) 
         {
-            _menu = menu;
+            _menuList = menuList;
         }
         /// <summary>
         /// 获取菜单列表
         /// </summary>
         [HttpGet]
-        public List<MenuInformation> GetMenuList()
+        public JsonResult GetMenuList()
         {
-            var MenuList = _menu.MenuList().ToList();
-            return MenuList;
+            var MenuList = _menuList.GetMenuList();
+            return Json(MenuList);
         }
     }
 }

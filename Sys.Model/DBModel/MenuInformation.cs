@@ -18,6 +18,6 @@ namespace Sys.Model.DBModel
         public int ParentID { get; set; }
         public int MenuEnabled { get; set; }
         public string Remarks { get; set; }
-        List<MenuInformation> Children { get; set; }
+        public List<MenuInformation> Children { get; set; }
     }
 }

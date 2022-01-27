@@ -7,6 +7,6 @@ namespace Sys.IRepository
 {
     public interface IUserLogin:IBaseRepository
     {
-        Task<T> QueryUser<T>(T model);
+
     }
 }

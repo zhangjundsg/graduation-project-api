@@ -29,7 +29,6 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\设计\Sys.CoreApi\obj\Debug\netcoreapp3.1\Sys.CoreApi.MvcApplicationPartsAssemblyInfo.cs
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.CoreApi.xml
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Model.dll

@@ -6726,6 +6726,7 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.22",
       "Microsoft.AspNetCore.Session >= 2.2.0",
       "Microsoft.Extensions.PlatformAbstractions >= 1.1.0",
+      "Newtonsoft.Json >= 13.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3",
       "Sys.IRepository >= 1.0.0",
       "Sys.IService >= 1.0.0",
@@ -6809,6 +6810,10 @@
           "Microsoft.Extensions.PlatformAbstractions": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[13.0.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
