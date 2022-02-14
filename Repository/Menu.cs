@@ -18,7 +18,19 @@ namespace Sys.Repository
         {
             using (IDbConnection conn = DbConnection.SqlConnection(AppConfigurtaion.GetSectionValue("SqlServer")))
             {
-                return conn.Query<MenuInformation>("getMenuList", commandType: CommandType.StoredProcedure);
+                try
+                {
+                    return conn.Query<MenuInformation>("getMenuList", commandType: CommandType.StoredProcedure);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return null;
+                }
+                finally
+                {
+                    conn.Close();
+                }
             }
         }
 

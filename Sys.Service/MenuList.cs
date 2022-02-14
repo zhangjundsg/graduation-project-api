@@ -25,7 +25,7 @@ namespace Sys.Service
         public List<MenuInformation> GetMenuTree(List<MenuInformation> list,int Pid)
         {
             List<MenuInformation> MenuList = new List<MenuInformation>();
-            var menuValue=list.Where(i=>i.ParentID==Pid).ToList();
+            var menuValue = list.Where(i => i.ParentID == Pid).ToList();
             if (menuValue.Count > 0) 
             {
                 for (int i = 0; i < menuValue.Count; i++)
