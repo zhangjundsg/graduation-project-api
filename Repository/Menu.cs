@@ -14,13 +14,19 @@ namespace Sys.Repository
 {
     public class Menu : BaseRepository,IMenu
     {
-        public IEnumerable<MenuInformation> MenuList()
+        public IEnumerable<MenuInformation> MenuList(int ID)
         {
             using (IDbConnection conn = DbConnection.SqlConnection(AppConfigurtaion.GetSectionValue("SqlServer")))
             {
                 try
                 {
-                    return conn.Query<MenuInformation>("getMenuList", commandType: CommandType.StoredProcedure);
+                    string sql = @"select menu.* from UserInformation u
+inner join UserRole ur on u.ID=ur.UserID
+inner join RoleInformation r on ur.RoleID=r.RoleID
+inner join RoleMenu rm on r.RoleID=rm.RoleID
+inner join MenuInformation menu on rm.MenuID=menu.MenuID
+where u.ID=@ID;";
+                    return conn.Query<MenuInformation>(sql,ID);
                 }
                 catch (Exception ex)
                 {

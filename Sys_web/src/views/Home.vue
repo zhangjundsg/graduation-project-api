@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-container>
-      <el-header class="homeHeader">人员办公信息系统</el-header>
+      <el-header class="homeHeader">人员办公管理系统</el-header>
       <el-container>
         <el-aside width="200px">
           <el-menu router unique-opened>
