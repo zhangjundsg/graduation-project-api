@@ -29,15 +29,5 @@
             验证码
             </summary>
         </member>
-        <member name="P:Sys.Model.UserInfo.ID">
-            <summary>
-            学生id
-            </summary>
-        </member>
-        <member name="P:Sys.Model.UserInfo.Name">
-            <summary>
-            姓名
-            </summary>
-        </member>
     </members>
 </doc>

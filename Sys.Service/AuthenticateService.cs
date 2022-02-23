@@ -41,6 +41,7 @@ namespace Sys.Service
 
         public bool IsValid(LoginRequestDto req)
         {
+            var result = _userLogin.IsAuthenticated<UserInformation>(req.UserName, req.Password);
             return true;
 
         }

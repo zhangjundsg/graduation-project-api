@@ -73,3 +73,4 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Repository.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.IRepository.pdb
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Repository.pdb
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Common.pdb
+E:\设计\Sys.CoreApi\obj\Debug\netcoreapp3.1\Sys.CoreApi.MvcApplicationPartsAssemblyInfo.cs

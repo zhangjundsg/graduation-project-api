@@ -1,27 +1,19 @@
-﻿using Sys.Common;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
+using Sys.Common;
 
 namespace Sys.Repository.DbHelper
 {
-   
+
     public class DbConnection
     {
         private static IDbConnection _dbConnection;
-        private static readonly object locker=new object();
+        static string sqlconnectionString = AppConfigurtaion.GetSectionValue("SqlServer");
         private DbConnection() { }
-        public static IDbConnection SqlConnection(string ConnectionStr)
+        public static IDbConnection SqlConnection()
         {
-            if (_dbConnection == null)
-            {
-                lock (locker)
-                {
-                    if (_dbConnection == null)
-                    {
-                        _dbConnection = new SqlConnection(ConnectionStr);
-                    }
-                }
-            }
+            _dbConnection = new SqlConnection(sqlconnectionString);
+            _dbConnection.Open();
             return _dbConnection;
         }
     }

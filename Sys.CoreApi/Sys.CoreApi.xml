@@ -24,17 +24,5 @@
             获取菜单列表
             </summary>
         </member>
-        <member name="T:Sys.CoreApi.Controllers.UserInfoController">
-            <summary>
-            用户信息
-            </summary>
-        </member>
-        <member name="M:Sys.CoreApi.Controllers.UserInfoController.Hello2(Sys.Model.UserInfo)">
-            <summary>
-            测试参数注释
-            </summary>
-            <param name="userinfo"></param>
-            <returns></returns>
-        </member>
     </members>
 </doc>

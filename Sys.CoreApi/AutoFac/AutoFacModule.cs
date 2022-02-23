@@ -10,7 +10,6 @@ namespace Sys.CoreApi.AutoFuc
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<UserInfoService>().As<IUserInfoService>(); 
             builder.RegisterType<AuthenticateService>().As<IAuthenticateService>();
             builder.RegisterType<MenuList>().As<IMenuList>();
             builder.RegisterType<Captcha>().As<ICaptcha>(); 

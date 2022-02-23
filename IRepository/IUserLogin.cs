@@ -7,6 +7,6 @@ namespace Sys.IRepository
 {
     public interface IUserLogin:IBaseRepository
     {
-
+        IEnumerable<T> IsAuthenticated<T>(string UserName,string Pwd);
     }
 }

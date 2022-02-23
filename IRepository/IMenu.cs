@@ -7,6 +7,6 @@ namespace Sys.IRepository
 {
     public interface IMenu: IBaseRepository
     {
-       IEnumerable<MenuInformation> MenuList(int ID);
+       IEnumerable<MenuInformation> MenuList();
     }
 }

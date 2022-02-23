@@ -81,7 +81,10 @@ export default {
             //存储token
             const token = resp.token;
             window.sessionStorage.setItem("token", token);
-            this.$router.replace("/home");
+            let path = this.$route.query.redirect;
+            this.$router.replace(
+              path == "/" || path == undefined ? "/home" : path
+            );
           });
         } else {
           this.$message({
