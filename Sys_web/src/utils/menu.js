@@ -8,7 +8,7 @@ export const initMenu = (router, store) => {
         return;
     }
 
-    getRequest('/api/Menu/1').then(data => {
+    getRequest('/api/Menu').then(data => {
         if (data == null) {
             Message.error('暂无菜单数据');
         } else {

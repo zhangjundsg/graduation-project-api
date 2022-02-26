@@ -82,3 +82,6 @@ E:\设计\OrmDBFirst\obj\Debug\netcoreapp3.1\OrmDBFirst.dll
 E:\设计\OrmDBFirst\obj\Debug\netcoreapp3.1\OrmDBFirst.pdb
 E:\设计\OrmDBFirst\obj\Debug\netcoreapp3.1\OrmDBFirst.genruntimeconfig.cache
 E:\设计\OrmDBFirst\obj\Debug\netcoreapp3.1\OrmDBFirst.csproj.AssemblyReference.cache
+E:\设计\OrmDBFirst\bin\Debug\netcoreapp3.1\Sys.Model.dll
+E:\设计\OrmDBFirst\bin\Debug\netcoreapp3.1\Sys.Model.pdb
+E:\设计\OrmDBFirst\bin\Debug\netcoreapp3.1\Sys.Model.xml

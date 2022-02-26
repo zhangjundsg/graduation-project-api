@@ -7,6 +7,6 @@ namespace Sys.IRepository
 {
     public interface IMenu: IBaseRepository<Sys_Menu>
     {
-        dynamic MenuInfo(int UserID);
+        List<Sys_Menu> MenuInfo(int UserID);
     }
 }

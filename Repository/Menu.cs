@@ -13,15 +13,26 @@ namespace Sys.Repository
 {
     public class Menu : BaseRepository<Sys_Menu>, IMenu
     {
-        public dynamic MenuInfo(int UserID)
+        public List<Sys_Menu> MenuInfo(int UserID)
         {
             using var db = DbConnection.Instance;
-            var list = db.Queryable<Sys_User, Sys_UserRole, Sys_Role, Sys_RoleMenu, Sys_Menu>((User, UserRole, Role, RoleMenu, Menu)
-                  => User.UserID == UserRole.UserID
-                  && UserRole.RoleID == Role.RoleID
-                  && Role.RoleID == RoleMenu.RoleID
-                  && RoleMenu.MenuID == Menu.MenuID
-                ).Where(User => User.UserID==UserID).ToList();
+            var list = db.Queryable<Sys_User, Sys_UserRole, Sys_Role, Sys_RoleMenu, Sys_Menu>((u, ur, r, rm, m)
+                  => u.UserID == ur.UserID
+                  && ur.RoleID == r.RoleID
+                  && r.RoleID == rm.RoleID
+                  && rm.MenuID == m.MenuID)
+                .Where(u => u.UserID == UserID)
+                .Select((u, ur, r, rm, m) => new Sys_Menu
+                {
+                    MenuID = m.MenuID,
+                    MenuPath = m.MenuPath,
+                    Component = m.Component,
+                    MenuName = m.MenuName,
+                    IconCls = m.IconCls,
+                    ParentID = m.ParentID,
+                    MenuEnabled = m.MenuEnabled,
+                    Remarks = m.Remarks
+                }).ToList();
             return list;
         }
     }
