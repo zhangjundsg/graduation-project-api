@@ -1,12 +1,12 @@
-﻿using Sys.Model.DBModel;
+﻿using Sys.Model.DBModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Sys.IRepository
 {
-    public interface IMenu: IBaseRepository
+    public interface IMenu: IBaseRepository<Sys_Menu>
     {
-       IEnumerable<MenuInformation> MenuList();
+        dynamic MenuInfo(int UserID);
     }
 }

@@ -4,15 +4,245 @@
         <name>Sys.Model</name>
     </assembly>
     <members>
-        <member name="T:Sys.Model.DBModel.MenuInformation">
+        <member name="T:Sys.Model.DBModels.Sys_Department">
             <summary>
-            MenuInformation表
+            
             </summary>
         </member>
-        <member name="T:Sys.Model.DBModel.UserInformation">
+        <member name="P:Sys.Model.DBModels.Sys_Department.DepartmentID">
             <summary>
-            UserInformation表
+            Desc:部门ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Department.DepartmentName">
+            <summary>
+            Desc:部门名称
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Department.DepartmentTel">
+            <summary>
+            Desc:部门电话
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Department.DepartmentEmail">
+            <summary>
+            Desc:部门邮箱
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Department.Remarks">
+            <summary>
+            Desc:备注(部门)
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sys.Model.DBModels.Sys_Menu">
+            <summary>
+            
             </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.MenuID">
+            <summary>
+            Desc:菜单ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.MenuUrl">
+            <summary>
+            Desc:菜单url
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.MenuPath">
+            <summary>
+            Desc:菜单路径
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.Component">
+            <summary>
+            Desc:组件
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.MenuName">
+            <summary>
+            Desc:菜单名称
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.IconCls">
+            <summary>
+            Desc:菜单图标
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.ParentID">
+            <summary>
+            Desc:父级菜单ID
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.MenuEnabled">
+            <summary>
+            Desc:是否启用
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Menu.Remarks">
+            <summary>
+            Desc:
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sys.Model.DBModels.Sys_Role">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Role.RoleID">
+            <summary>
+            Desc:角色ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Role.RoleName">
+            <summary>
+            Desc:角色名称
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Role.Remarks">
+            <summary>
+            Desc:备注(角色)
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="T:Sys.Model.DBModels.Sys_RoleMenu">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_RoleMenu.RoleID">
+            <summary>
+            Desc:角色ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_RoleMenu.MenuID">
+            <summary>
+            Desc:菜单ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="T:Sys.Model.DBModels.Sys_User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.UserID">
+            <summary>
+            Desc:用户ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.UserName">
+            <summary>
+            Desc:账号
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.UserPassword">
+            <summary>
+            Desc:用户密码
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.Name">
+            <summary>
+            Desc:名称
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.UserImg">
+            <summary>
+            Desc:用户头像
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.Email">
+            <summary>
+            Desc:用户邮箱
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.RegisterTime">
+            <summary>
+            Desc:注册时间
+            Default:
+            Nullable:True
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.RoleID">
+            <summary>
+            Desc:角色ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_User.DepartmentID">
+            <summary>
+            Desc:部门ID
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="T:Sys.Model.DBModels.Sys_UserRole">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_UserRole.UserID">
+            <summary>
+            Desc:用户
+            Default:
+            Nullable:False
+            </summary>           
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_UserRole.RoleID">
+            <summary>
+            Desc:角色
+            Default:
+            Nullable:False
+            </summary>           
         </member>
         <member name="P:Sys.Model.LoginRequestDto.UserName">
             <summary>

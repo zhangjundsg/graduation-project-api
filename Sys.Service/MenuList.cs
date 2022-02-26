@@ -4,7 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Sys.Model.DBModel;
+using Sys.Model.DBModels;
+using Sys.Common;
 
 namespace Sys.Service
 {
@@ -15,35 +16,12 @@ namespace Sys.Service
         {
             _iMenu = iMenu;
         }
-        public List<MenuInformation> GetMenuList()
+        List<Sys_Menu> IMenuList.MenuList(int id)
         {
-            var List = _iMenu.MenuList().ToList();
-            var MenuList= GetMenuTree(List, 0);
-            return MenuList;
+            var list = _iMenu.MenuInfo(id);
+            var menu = Tree.GetMenuTree(list, 0);
+            return menu;
         }
 
-        public List<MenuInformation> GetMenuTree(List<MenuInformation> list,int Pid)
-        {
-            List<MenuInformation> MenuList = new List<MenuInformation>();
-            var menuValue = list.Where(i => i.ParentID == Pid).ToList();
-            if (menuValue.Count > 0) 
-            {
-                for (int i = 0; i < menuValue.Count; i++)
-                {
-                    MenuInformation menu = new MenuInformation();
-                    menu.ParentID = menuValue[i].ParentID;
-                    menu.MenuUrl = menuValue[i].MenuUrl;
-                    menu.MenuPath = menuValue[i].MenuPath;
-                    menu.Component = menuValue[i].Component;
-                    menu.MenuName = menuValue[i].MenuName;
-                    menu.IconCls = menuValue[i].IconCls;
-                    menu.MenuEnabled = menuValue[i].MenuEnabled;
-                    menu.Remarks = menuValue[i].Remarks;
-                    menu.Children = GetMenuTree(list, menuValue[i].MenuID);
-                    MenuList.Add(menu);
-                }
-            }
-            return MenuList;
-        }
     }
 }

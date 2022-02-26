@@ -23,9 +23,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sys.IService", "..\Sys.ISer
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sys.Service", "..\Sys.Service\Sys.Service.csproj", "{29C808B9-6432-420C-BACC-95BB08FF395D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sys.Repository", "..\Repository\Sys.Repository.csproj", "{61AA1E32-474B-4D81-BDF0-18D15710CA78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sys.Repository", "..\Repository\Sys.Repository.csproj", "{61AA1E32-474B-4D81-BDF0-18D15710CA78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sys.IRepository", "..\IRepository\Sys.IRepository.csproj", "{63C52882-7A04-4BC0-AD76-7701F5E8202E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sys.IRepository", "..\IRepository\Sys.IRepository.csproj", "{63C52882-7A04-4BC0-AD76-7701F5E8202E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrmDBFirst", "..\OrmDBFirst\OrmDBFirst.csproj", "{33C4FB8E-8A77-4882-84CE-C844D1AE35A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{63C52882-7A04-4BC0-AD76-7701F5E8202E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63C52882-7A04-4BC0-AD76-7701F5E8202E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63C52882-7A04-4BC0-AD76-7701F5E8202E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33C4FB8E-8A77-4882-84CE-C844D1AE35A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33C4FB8E-8A77-4882-84CE-C844D1AE35A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33C4FB8E-8A77-4882-84CE-C844D1AE35A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33C4FB8E-8A77-4882-84CE-C844D1AE35A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -8,7 +8,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Sys.IRepository;
-using Sys.Model.DBModel;
+using Sys.Model.DBModels;
+using Sys.Common;
 
 namespace Sys.Service
 {
@@ -23,13 +24,15 @@ namespace Sys.Service
         }
         public bool IsAuthenticated(LoginRequestDto request, out string token)
         {
-            token = string.Empty;
             if (!IsValid(request))
-                return false;
-            var claims = new[]
             {
-                new Claim(ClaimTypes.Name,request.UserName)
-            };
+                token = "";
+                return false;
+            }
+            var claims = new[]
+                 {
+                     new Claim(ClaimTypes.Name,request.UserName)
+                };
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_tokenManagement.Secret));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var jwtToken = new JwtSecurityToken(_tokenManagement.Issuer, _tokenManagement.Audience, claims,
@@ -39,10 +42,19 @@ namespace Sys.Service
             return true;
         }
 
+     
+
         public bool IsValid(LoginRequestDto req)
         {
-            var result = _userLogin.IsAuthenticated<UserInformation>(req.UserName, req.Password);
-            return true;
+            var userInfo = _userLogin.IsSuccess(req.UserName, Md5Encrypt.Md5Enc(req.Password));
+            if (userInfo.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
 
         }
     }

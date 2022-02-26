@@ -1,4 +1,4 @@
-﻿using Sys.Model.DBModel;
+﻿using Sys.Model.DBModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,7 +7,6 @@ namespace Sys.IService
 {
     public interface IMenuList
     {
-        List<MenuInformation> GetMenuList();
-        List<MenuInformation> GetMenuTree(List<MenuInformation> list, int Pid);
+        List<Sys_Menu> MenuList(int id);
     }
 }

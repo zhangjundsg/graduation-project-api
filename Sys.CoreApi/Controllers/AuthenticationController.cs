@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Sys.IService;
 using Sys.Model;
@@ -27,16 +28,24 @@ namespace Sys.CoreApi.Controllers
             }
             if (_authenticateService.IsAuthenticated(req, out string token))
             {
-                TokenResponse obj = new TokenResponse()
+                return Ok(new TokenResponse()
                 {
                     Code = (int)ResponseCode.Success,
                     TokenHeader = "Bearer",
-                    Msg = "登录成功",
+                    Msg = "登陆成功",
                     Token = token
-                };
-                return Ok(obj) ;
+                }) ;
             }
-            return BadRequest("验证失败！");
+            else
+            {
+                return Ok(new TokenResponse()
+                {
+                    Code = (int)ResponseCode.ValidationError,
+                    TokenHeader = "",
+                    Msg = "账号验证失败",
+                    Token = token
+                });
+            }
 
         }
     }

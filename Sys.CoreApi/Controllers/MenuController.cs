@@ -21,10 +21,10 @@ namespace Sys.CoreApi.Controllers
         /// 获取菜单列表
         /// </summary>
         [HttpGet]
-        public JsonResult GetMenuList()
+        public JsonResult GetMenuList(int id)
         {
-            var MenuList = _menuList.GetMenuList();
-            return Json(MenuList);
+            var list = _menuList.MenuList(id);
+            return Json(list);
         }
     }
 }

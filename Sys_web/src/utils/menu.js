@@ -1,4 +1,5 @@
 import { getRequest } from "./api";
+import { Message } from 'element-ui';
 
 
 
@@ -7,13 +8,17 @@ export const initMenu = (router, store) => {
         return;
     }
 
-    getRequest('/api/Menu').then(data => {
-        //格式化路由
-        let Routes = formatRoutes(data);
-        //添加路由
-        router.addRoutes(Routes);
-        //将数据加入vuex
-        store.commit('initRoutes', Routes);
+    getRequest('/api/Menu/1').then(data => {
+        if (data == null) {
+            Message.error('暂无菜单数据');
+        } else {
+            //格式化路由
+            let Routes = formatRoutes(data);
+            //添加路由
+            router.addRoutes(Routes);
+            //将数据加入vuex
+            store.commit('initRoutes', Routes);
+        }
     })
 
 }

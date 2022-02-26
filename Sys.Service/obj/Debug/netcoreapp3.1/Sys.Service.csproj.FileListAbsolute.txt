@@ -16,3 +16,5 @@ E:\设计\Sys.Service\bin\Debug\netcoreapp3.1\Sys.Model.pdb
 E:\设计\Sys.Service\bin\Debug\netcoreapp3.1\Sys.Model.xml
 E:\设计\Sys.Service\bin\Debug\netcoreapp3.1\Sys.IRepository.dll
 E:\设计\Sys.Service\bin\Debug\netcoreapp3.1\Sys.IRepository.pdb
+E:\设计\Sys.Service\bin\Debug\netcoreapp3.1\Sys.Common.dll
+E:\设计\Sys.Service\bin\Debug\netcoreapp3.1\Sys.Common.pdb

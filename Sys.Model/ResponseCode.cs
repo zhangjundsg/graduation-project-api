@@ -7,6 +7,9 @@ namespace Sys.Model
     public enum ResponseCode:int
     {
         Success=200,
-        NotFound=404,
+        ValidationError=233,
+        CodeError= 255,
+        ValidationFailed=201,
+        NotFound =404,
     }
 }

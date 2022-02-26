@@ -113,9 +113,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Dapper": {
+            "SqlSugarCore": {
               "target": "Package",
-              "version": "[2.0.123, )"
+              "version": "[5.0.5.4, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
@@ -168,7 +168,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\设计\\Sys.Model\\Sys.Model.csproj": {
+                "projectPath": "E:\\设计\\Sys.Model\\Sys.Model.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -181,17 +185,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
               "version": "[5.0.13, )"
-            },
-            "Microsoft.AspNetCore.Session": {
-              "target": "Package",
-              "version": "[2.2.0, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -268,6 +264,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.0.5.4, )"
             }
           },
           "imports": [

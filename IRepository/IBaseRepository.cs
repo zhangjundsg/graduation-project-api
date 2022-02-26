@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sys.IRepository
 {
-    public interface IBaseRepository
+    public interface IBaseRepository<T> where T : class, new()
     {
-   
+        bool Insert(T model);
+        bool Delete(T model);
+        bool Update(T model);
+        T Query(int id);
     }
 }

@@ -64,7 +64,7 @@ namespace Sys.CoreApi
 
             //×¢²áswagger·þÎñ
             services.AddSwaggerSetup();
-            
+
         }
         //autofuc×¢²á
         public void ConfigureContainer(ContainerBuilder builder)
@@ -86,7 +86,7 @@ namespace Sys.CoreApi
             });
             app.UseAuthentication();
             app.UseRouting();
-            
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

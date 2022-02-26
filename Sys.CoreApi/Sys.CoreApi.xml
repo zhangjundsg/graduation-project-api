@@ -19,7 +19,7 @@
             菜单
             </summary>
         </member>
-        <member name="M:Sys.CoreApi.Controllers.MenuController.GetMenuList">
+        <member name="M:Sys.CoreApi.Controllers.MenuController.GetMenuList(System.Int32)">
             <summary>
             获取菜单列表
             </summary>

@@ -40,7 +40,12 @@
       "ProjectGuid": "63c52882-7a04-4bc0-ad76-7701f5e8202e",
       "DisplayName": "Sys.IRepository",
       "ColorIndex": 6
+    },
+    "33c4fb8e-8a77-4882-84ce-c844d1ae35a4": {
+      "ProjectGuid": "33c4fb8e-8a77-4882-84ce-c844d1ae35a4",
+      "DisplayName": "OrmDBFirst",
+      "ColorIndex": 7
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 8
 }

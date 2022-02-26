@@ -13,7 +13,7 @@ namespace Sys.Service
     public class Captcha : ICaptcha
     {
         private const string Letters = "1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,U,V,W,X,Y,Z";
-        public Task<CaptchaResult> GenerateCaptchaImageAsync(string captchaCode, int width = 0, int height = 30)
+        public CaptchaResult GenerateCaptchaImage(string captchaCode, int width = 0, int height = 30)
         {
             //验证码颜色集合
             Color[] c = { Color.Black, Color.Red, Color.DarkBlue, Color.Green, Color.Orange, Color.Brown, Color.DarkCyan, Color.Purple };
@@ -67,15 +67,15 @@ namespace Sys.Service
             g.Dispose();
             image.Dispose();
 
-            return Task.FromResult(new CaptchaResult
+            return new CaptchaResult()
             {
                 CaptchaCode = captchaCode,
                 CaptchaMemoryStream = ms,
                 Timestamp = DateTime.Now
-            });
+            };
         }
 
-        public Task<string> GenerateRandomCaptchaAsync(int codeLength = 5)
+        public string GenerateRandomCaptcha(int codeLength = 5)
         {
             var array = Letters.Split(new[] { ',' });
 
@@ -91,13 +91,13 @@ namespace Sys.Service
 
                 var index = random.Next(array.Length);
                 if (temp != -1 && temp == index)
-                    return GenerateRandomCaptchaAsync(codeLength);
+                    return GenerateRandomCaptcha(codeLength);
 
                 temp = index;
 
                 captcheCode += array[index];
             }
-            return Task.FromResult(captcheCode);
+            return captcheCode;
         }
     }
 }

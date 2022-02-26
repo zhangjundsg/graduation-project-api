@@ -1,20 +1,30 @@
-﻿using System.Data.SqlClient;
-using System.Data;
-using Sys.Common;
+﻿using Sys.Common;
+using SqlSugar;
+using System.Linq;
+using System;
 
 namespace Sys.Repository.DbHelper
 {
-
     public class DbConnection
     {
-        private static IDbConnection _dbConnection;
-        static string sqlconnectionString = AppConfigurtaion.GetSectionValue("SqlServer");
-        private DbConnection() { }
-        public static IDbConnection SqlConnection()
+        public static SqlSugarClient Instance
         {
-            _dbConnection = new SqlConnection(sqlconnectionString);
-            _dbConnection.Open();
-            return _dbConnection;
+            get
+            {
+                var db = new SqlSugarClient(new ConnectionConfig()
+                {
+                    ConnectionString = AppConfigurtaion.GetSectionValue("SqlServer"),
+                    DbType = DbType.SqlServer,
+                    IsAutoCloseConnection = true,
+                    InitKeyType = InitKeyType.Attribute
+                });
+                db.Aop.OnLogExecuting = (sql, pars) =>
+                {
+                    Console.WriteLine(sql + "\r\n" + db.Utilities.SerializeObject(pars.ToDictionary(it => it.ParameterName, it => it.Value)));
+                    Console.WriteLine();
+                };
+                return db;
+            }
         }
     }
 }

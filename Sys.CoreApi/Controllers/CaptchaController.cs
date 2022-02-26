@@ -17,11 +17,12 @@ namespace Sys.CoreApi.Controllers
             _ICaptcha = ICaptcha;
         }
         [HttpGet]
-        public async Task<FileContentResult> CaptchaAsync()
+        public FileContentResult Captcha()
         {
-            var code = await _ICaptcha.GenerateRandomCaptchaAsync();
+            var code =  _ICaptcha.GenerateRandomCaptcha();
 
-            var result = await _ICaptcha.GenerateCaptchaImageAsync(code);
+            var result = _ICaptcha.GenerateCaptchaImage(code);
+
 
             return File(result.CaptchaMemoryStream.ToArray(), "image/png");
         }

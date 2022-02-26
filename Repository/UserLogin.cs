@@ -4,33 +4,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using Sys.Repository.DbHelper;
-using Dapper;
 using Sys.IRepository;
+using SqlSugar;
+using Sys.Model.DBModels;
 
 namespace Sys.Repository
 {
-    public class UserLogin : BaseRepository, IUserLogin
+    public class UserLogin : BaseRepository<Sys_User>, IUserLogin
     {
-
-        public IEnumerable<T> IsAuthenticated<T>(string UserName, string Pwd)
+        public List<Sys_User> IsSuccess(string UserName, string UserPwd)
         {
-            var sql = @"select ID from UserInformation where UserName=@UserName and UserPassword=@Pwd";
-            using (IDbConnection conn = DbConnection.SqlConnection())
-            {
-                try
-                {
-                    return conn.Query<T>(sql, new { UserName = UserName, Pwd = Pwd });
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    throw;
-                }
-                finally
-                {
-                    conn.Close();
-                }
-            }
+            using var db = DbConnection.Instance;
+            return db.Queryable<Sys_User>().Where(i => i.UserName == UserName && i.UserPassword == UserPwd).ToList();
         }
     }
 }

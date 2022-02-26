@@ -16,7 +16,7 @@ axios.interceptors.request.use(config => {
 //响应拦截器
 axios.interceptors.response.use(success => {
     if (success.status && success.status == 200) {
-        if (success.data.code == 500 || success.data.code == 401 || success.data.code == 403) {
+        if (success.data.code == 500 || success.data.code == 401 || success.data.code == 403 || success.data.code == 233 || success.data.code == 255) {
             Message.error({ message: success.data.msg });
             return;
         }
@@ -37,8 +37,6 @@ axios.interceptors.response.use(success => {
     } else {
         if (error.response.data.msg) {
             Message.error({ message: error.response.data.msg });
-        } else {
-            Message.error({ message: '未知错误！' });
         }
     }
     return;
