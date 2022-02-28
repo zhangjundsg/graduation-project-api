@@ -37,7 +37,6 @@
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
           "Newtonsoft.Json": "13.0.1",
           "Swashbuckle.AspNetCore": "6.2.3",
-          "Sys.IRepository": "1.0.0",
           "Sys.IService": "1.0.0",
           "Sys.Model": "1.0.0",
           "Sys.Repository": "1.0.0",

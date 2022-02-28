@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Sys.IService
 {
-    public interface IMenuList
+    public interface IMenuService
     {
         List<Sys_Menu> MenuList(int id);
     }

@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Sys.IRepository
 {
-    public interface IUserLogin:IBaseRepository<Sys_User>
+    public interface IUserRepository:IBaseRepository<Sys_User>
     {
         List<Sys_User> IsSuccess(string UserName,string UserPwd);
+        List<Sys_User> GetAll(int id);
     }
 }

@@ -10,8 +10,14 @@ using Sys.Model.DBModels;
 
 namespace Sys.Repository
 {
-    public class UserLogin : BaseRepository<Sys_User>, IUserLogin
+    public class UserRepository : BaseRepository<Sys_User>, IUserRepository
     {
+        public List<Sys_User> GetAll(int id)
+        {
+            using var db = DbConnection.Instance;
+            return db.Queryable<Sys_User>().Where(i => i.UserID == id).ToList();
+        }
+
         public List<Sys_User> IsSuccess(string UserName, string UserPwd)
         {
             using var db = DbConnection.Instance;

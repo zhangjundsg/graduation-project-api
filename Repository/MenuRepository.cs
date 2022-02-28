@@ -11,7 +11,7 @@ using SqlSugar;
 
 namespace Sys.Repository
 {
-    public class Menu : BaseRepository<Sys_Menu>, IMenu
+    public class MenuRepository : BaseRepository<Sys_Menu>, IMenuRepository
     {
         public List<Sys_Menu> MenuInfo(int UserID)
         {

@@ -26,15 +26,16 @@ namespace Sys.CoreApi.Controllers
             {
                 return BadRequest("用户数据验证失败！");
             }
-            if (_authenticateService.IsAuthenticated(req, out string token))
+            if (_authenticateService.IsAuthenticated(req, out string token,out int UserID))
             {
                 return Ok(new TokenResponse()
                 {
                     Code = (int)ResponseCode.Success,
                     TokenHeader = "Bearer",
                     Msg = "登陆成功",
+                    UserID = UserID,
                     Token = token
-                }) ;
+                });
             }
             else
             {
@@ -43,6 +44,7 @@ namespace Sys.CoreApi.Controllers
                     Code = (int)ResponseCode.ValidationError,
                     TokenHeader = "",
                     Msg = "账号验证失败",
+                    UserID = UserID,
                     Token = token
                 });
             }

@@ -1,7 +1,23 @@
 <template>
   <div>
     <el-container>
-      <el-header class="homeHeader">人员办公管理系统</el-header>
+      <el-header class="homeHeader">
+        人员办公管理系统
+        <el-dropdown>
+          <span class="el-dropdown-link">
+            <span class="users">{{ user.name }}</span>
+            <i
+              ><img
+                src="https://tse3-mm.cn.bing.net/th/id/OIP-C.ZBiGB_jukpQY2tbilsfb2QHaJu?w=182&h=239&c=7&r=0&o=5&dpr=1.25&pid=1.7"
+            /></i>
+          </span>
+          <el-dropdown-menu slot="dropdown" class="user">
+            <el-dropdown-item>个人中心</el-dropdown-item>
+            <el-dropdown-item>设置</el-dropdown-item>
+            <el-dropdown-item>退出</el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </el-header>
       <el-container>
         <el-aside width="200px">
           <el-menu router unique-opened>
@@ -46,6 +62,11 @@
 <script>
 export default {
   name: "Home",
+  data() {
+    return {
+      user: JSON.parse(window.sessionStorage.getItem("userInfo")),
+    };
+  },
   computed: {
     routes() {
       return this.$store.state.routes;
@@ -65,5 +86,18 @@ export default {
   font-size: 25px;
   color: white;
   font-family: 华文楷体;
+}
+.user {
+  cursor: pointer;
+}
+.el-dropdown-link img {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+  margin-left: 10px;
+}
+.users {
+  font-weight: bold;
+  font-size: 18px;
 }
 </style>

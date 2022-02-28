@@ -16,17 +16,19 @@ namespace Sys.Service
     public class AuthenticateService : IAuthenticateService
     {
         private readonly TokenManagement _tokenManagement;
-        private readonly IUserLogin _userLogin;
-        public AuthenticateService(IOptions<TokenManagement> tokenManagement, IUserLogin userLogin)
+        private readonly IUserRepository _userLogin;
+        public AuthenticateService(IOptions<TokenManagement> tokenManagement, IUserRepository userLogin)
         {
             _tokenManagement = tokenManagement.Value;
             _userLogin = userLogin;
         }
-        public bool IsAuthenticated(LoginRequestDto request, out string token)
+        public bool IsAuthenticated(LoginRequestDto request, out string token,out int UserID)
         {
-            if (!IsValid(request))
+            var id = IsValid(request);
+            if (id == -1)
             {
                 token = "";
+                UserID = id;
                 return false;
             }
             var claims = new[]
@@ -39,21 +41,24 @@ namespace Sys.Service
                 expires: DateTime.Now.AddMinutes(_tokenManagement.AccessExpiration),
                 signingCredentials: credentials);
             token = new JwtSecurityTokenHandler().WriteToken(jwtToken);
+            UserID = id;
             return true;
         }
 
      
 
-        public bool IsValid(LoginRequestDto req)
+        public int IsValid(LoginRequestDto req)
         {
             var userInfo = _userLogin.IsSuccess(req.UserName, Md5Encrypt.Md5Enc(req.Password));
             if (userInfo.Count > 0)
             {
-                return true;
+               
+                return userInfo[0].UserID;
             }
             else
             {
-                return false;
+              
+                return -1;
             }
 
         }

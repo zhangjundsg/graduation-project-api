@@ -12,8 +12,8 @@ namespace Sys.CoreApi.Controllers
     [Authorize]
     public class MenuController : Controller
     {
-        private readonly IMenuList _menuList;
-        public MenuController(IMenuList menuList) 
+        private readonly IMenuService _menuList;
+        public MenuController(IMenuService menuList) 
         {
             _menuList = menuList;
         }

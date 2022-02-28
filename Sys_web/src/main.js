@@ -24,6 +24,13 @@ Vue.prototype.deleteRequest = deleteRequest;
 router.beforeEach((to, from, next) => {
   if (window.sessionStorage.getItem('token')) {
     initMenu(router, store);
+    if (!window.sessionStorage.getItem('userInfo')) {
+      const userid = window.sessionStorage.getItem('userid');
+      return getRequest('/api/UserInfo/?id=' + userid).then(resp => {
+        window.sessionStorage.setItem('userInfo', JSON.stringify(resp));
+        next();
+      })
+    }
     next();
   } else {
     if (to.path == '/') {

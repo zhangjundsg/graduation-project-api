@@ -7,8 +7,9 @@ export const initMenu = (router, store) => {
     if (store.state.routes.length > 0) {
         return;
     }
+    const userid = window.sessionStorage.getItem('userid');
 
-    getRequest('/api/Menu').then(data => {
+    getRequest('/api/Menu/?id=' + userid).then(data => {
         if (data == null) {
             Message.error('暂无菜单数据');
         } else {

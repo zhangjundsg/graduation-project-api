@@ -24,7 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IRepository\Sys.IRepository.csproj" />
     <ProjectReference Include="..\Repository\Sys.Repository.csproj" />
     <ProjectReference Include="..\Sys.IService\Sys.IService.csproj" />
     <ProjectReference Include="..\Sys.Model\Sys.Model.csproj" />

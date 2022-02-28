@@ -9,14 +9,14 @@ using Sys.Common;
 
 namespace Sys.Service
 {
-    public class MenuList : IMenuList
+    public class MenuService : IMenuService
     {
-        private readonly IMenu _iMenu;
-        public MenuList(IMenu iMenu)
+        private readonly IMenuRepository _iMenu;
+        public MenuService(IMenuRepository iMenu)
         {
             _iMenu = iMenu;
         }
-        List<Sys_Menu> IMenuList.MenuList(int id)
+        List<Sys_Menu> IMenuService.MenuList(int id)
         {
             var list = _iMenu.MenuInfo(id);
             var menu = Tree.GetMenuTree(list, 0);

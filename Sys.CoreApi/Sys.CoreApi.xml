@@ -24,5 +24,10 @@
             获取菜单列表
             </summary>
         </member>
+        <member name="T:Sys.CoreApi.Controllers.UserInfoController">
+            <summary>
+            用户信息
+            </summary>
+        </member>
     </members>
 </doc>

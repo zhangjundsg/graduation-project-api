@@ -80,7 +80,9 @@ export default {
           ).then((resp) => {
             //存储token
             const token = resp.token;
+            const userid = resp.userID;
             window.sessionStorage.setItem("token", token);
+            window.sessionStorage.setItem("userid", userid);
             let path = this.$route.query.redirect;
             this.$router.replace(
               path == "/" || path == undefined ? "/home" : path

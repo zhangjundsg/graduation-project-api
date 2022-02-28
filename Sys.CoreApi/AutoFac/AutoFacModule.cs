@@ -1,8 +1,4 @@
 ﻿using Autofac;
-using Sys.IRepository;
-using Sys.IService;
-using Sys.Repository;
-using Sys.Service;
 using System.Reflection;
 
 namespace Sys.CoreApi.AutoFuc

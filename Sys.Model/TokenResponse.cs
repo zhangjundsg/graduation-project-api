@@ -15,5 +15,7 @@ namespace Sys.Model
         public string Token  { get; set; }
         [JsonProperty("msg")]
         public string Msg { get; set; }
+        [JsonProperty("userid")]
+        public int UserID { get; set; }
     }
 }

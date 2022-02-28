@@ -11,8 +11,8 @@ namespace Sys.CoreApi.Controllers
     [ApiController]
     public class CaptchaController : Controller
     {
-        private readonly ICaptcha _ICaptcha;
-        public CaptchaController(ICaptcha ICaptcha)
+        private readonly ICaptchaService _ICaptcha;
+        public CaptchaController(ICaptchaService ICaptcha)
         {
             _ICaptcha = ICaptcha;
         }

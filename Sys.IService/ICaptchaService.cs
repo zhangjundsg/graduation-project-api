@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sys.IService
 {
-    public interface ICaptcha
+    public interface ICaptchaService
     {
         /// <summary>
         /// 生成随机验证码

@@ -8483,7 +8483,6 @@
       "Microsoft.Extensions.PlatformAbstractions >= 1.1.0",
       "Newtonsoft.Json >= 13.0.1",
       "Swashbuckle.AspNetCore >= 6.2.3",
-      "Sys.IRepository >= 1.0.0",
       "Sys.IService >= 1.0.0",
       "Sys.Model >= 1.0.0",
       "Sys.Repository >= 1.0.0",
@@ -8522,9 +8521,6 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\设计\\IRepository\\Sys.IRepository.csproj": {
-              "projectPath": "E:\\设计\\IRepository\\Sys.IRepository.csproj"
-            },
             "E:\\设计\\Repository\\Sys.Repository.csproj": {
               "projectPath": "E:\\设计\\Repository\\Sys.Repository.csproj"
             },

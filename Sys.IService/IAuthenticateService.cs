@@ -14,12 +14,12 @@ namespace Sys.IService
         /// <param name="request">用户信息</param>
         /// <param name="token">Token</param>
         /// <returns></returns>
-        bool IsAuthenticated(LoginRequestDto request, out string token);
+        bool IsAuthenticated(LoginRequestDto request, out string token, out int UserID);
         /// <summary>
         /// 验证信息
         /// </summary>
         /// <param name="req">用户登录信息</param>
         /// <returns></returns>
-        bool IsValid(LoginRequestDto req);
+        int IsValid(LoginRequestDto req);
     }
 }
