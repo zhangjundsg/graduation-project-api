@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sys.IService;
+using Sys.Model;
 using Sys.Model.DBModels;
 
 namespace Sys.CoreApi.Controllers
@@ -10,7 +11,6 @@ namespace Sys.CoreApi.Controllers
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class UserInfoController : Controller
     {
         private readonly IUserInformationService _user;
@@ -19,6 +19,7 @@ namespace Sys.CoreApi.Controllers
             _user = user;
         }
         [HttpGet]
+        [Authorize]
         public JsonResult GetUserInformation(int id)
         {
             var userinfo = _user.GetUserInfo(id);
@@ -33,6 +34,11 @@ namespace Sys.CoreApi.Controllers
                 user.Name= item.Name;
             }
             return Json(user);
+        }
+        [HttpPost]
+        public JsonResult LoginOut()
+        {
+            return Json(new { code = ResponseCode.Success, msg = "注销成功！" });
         }
     }
 }

@@ -3,7 +3,7 @@
     <el-container>
       <el-header class="homeHeader">
         人员办公管理系统
-        <el-dropdown>
+        <el-dropdown @command="commandHeadler">
           <span class="el-dropdown-link">
             <span class="users">{{ user.name }}</span>
             <i
@@ -12,9 +12,9 @@
             /></i>
           </span>
           <el-dropdown-menu slot="dropdown" class="user">
-            <el-dropdown-item>个人中心</el-dropdown-item>
-            <el-dropdown-item>设置</el-dropdown-item>
-            <el-dropdown-item>退出</el-dropdown-item>
+            <el-dropdown-item command="userinfo">个人中心</el-dropdown-item>
+            <el-dropdown-item command="setting">设置</el-dropdown-item>
+            <el-dropdown-item command="outlogin">退出</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
       </el-header>
@@ -52,7 +52,7 @@
               this.$router.currentRoute.name
             }}</el-breadcrumb-item>
           </el-breadcrumb>
-          <router-view />
+          <router-view class="homeRouter" />
         </el-main>
       </el-container>
     </el-container>
@@ -70,6 +70,31 @@ export default {
   computed: {
     routes() {
       return this.$store.state.routes;
+    },
+  },
+  methods: {
+    commandHeadler(command) {
+      if (command == "outlogin") {
+        this.$confirm("是否退出登录?", "提示", {
+          confirmButtonText: "确定",
+          cancelButtonText: "取消",
+          type: "warning",
+        })
+          .then(() => {
+            this.postRequest("/api/UserInfo");
+            window.sessionStorage.removeItem("token");
+            window.sessionStorage.removeItem("userInfo");
+            window.sessionStorage.removeItem("userid");
+            this.$store.commit("initRoutes", []);
+            this.$router.replace("/");
+          })
+          .catch(() => {
+            this.$message({
+              type: "info",
+              message: "已取消",
+            });
+          });
+      }
     },
   },
 };
@@ -99,5 +124,8 @@ export default {
 .users {
   font-weight: bold;
   font-size: 18px;
+}
+.homeRouter {
+  margin-top: 12px;
 }
 </style>

@@ -10,7 +10,7 @@
       element-loading-spinner="el-icon-loading"
       element-loading-background="rgba(0, 0, 0, 0.8)"
     >
-      <h3 class="loginTitle">系统登陆</h3>
+      <h3 class="loginTitle">企业人员信息管理系统</h3>
       <el-form-item prop="username">
         <el-input type="text" v-model="loginForm.username" placeholder="账号">
         </el-input>

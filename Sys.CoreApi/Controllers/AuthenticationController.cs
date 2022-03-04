@@ -44,7 +44,7 @@ namespace Sys.CoreApi.Controllers
                     Code = (int)ResponseCode.ValidationError,
                     TokenHeader = "",
                     Msg = "账号验证失败",
-                    UserID = UserID,
+                    UserID = -1,
                     Token = token
                 });
             }
