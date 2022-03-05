@@ -23,5 +23,11 @@ namespace Sys.Repository
             using var db = DbConnection.Instance;
             return db.Queryable<Sys_User>().Where(i => i.UserName == UserName && i.UserPassword == UserPwd).ToList();
         }
+
+        public int RelevancyRoleCount(int roleID)
+        {
+            using var db = DbConnection.Instance;
+            return db.Queryable<Sys_User>().Where(i => i.RoleID == roleID).Count();
+        }
     }
 }

@@ -10,7 +10,7 @@ export const initMenu = (router, store) => {
     const userid = window.sessionStorage.getItem('userid');
 
     getRequest('/api/Menu/?id=' + userid).then(data => {
-        if (data.length == 0) {
+        if (!data) {
             Message.error('暂无菜单数据,请联系管理员');
         } else {
             //格式化路由

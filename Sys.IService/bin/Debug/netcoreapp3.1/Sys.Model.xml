@@ -138,6 +138,20 @@
             Nullable:True
             </summary>           
         </member>
+        <member name="P:Sys.Model.DBModels.Sys_Role.CreateTime">
+            <summary>
+            Desc:创建时间
+            Default:
+            Nullable:True
+            </summary>  
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_Role.Enabled">
+            <summary>
+            Desc:是否启用
+            Default:
+            Nullable:False
+            </summary>  
+        </member>
         <member name="T:Sys.Model.DBModels.Sys_RoleMenu">
             <summary>
             

@@ -26,7 +26,7 @@ router.beforeEach((to, from, next) => {
     initMenu(router, store);
     if (!window.sessionStorage.getItem('userInfo')) {
       const userid = window.sessionStorage.getItem('userid');
-      return getRequest('/api/UserInfo/?id=' + userid).then(resp => {
+      return getRequest('/api/UserInfo/GetUserInformation/?id=' + userid).then(resp => {
         window.sessionStorage.setItem('userInfo', JSON.stringify(resp));
         next();
       })

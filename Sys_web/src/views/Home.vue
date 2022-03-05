@@ -81,7 +81,7 @@ export default {
           type: "warning",
         })
           .then(() => {
-            this.postRequest("/api/UserInfo");
+            this.postRequest("/api/UserInfo/LoginOut");
             window.sessionStorage.removeItem("token");
             window.sessionStorage.removeItem("userInfo");
             window.sessionStorage.removeItem("userid");

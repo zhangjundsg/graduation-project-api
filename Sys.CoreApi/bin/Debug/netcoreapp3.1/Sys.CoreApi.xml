@@ -24,10 +24,57 @@
             获取菜单列表
             </summary>
         </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.GetRoleInformation">
+            <summary>
+            获取角色信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.AddRoleInformation(Sys.Model.DBModels.Sys_Role)">
+            <summary>
+            添加角色信息
+            </summary>
+            <param name="role">信息内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.DelRoleInformation(System.Int32)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="RoleID">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.DelRoleInformationArry(System.Int32[])">
+            <summary>
+            删除多个角色
+            </summary>
+            <param name="list">角色ID数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.UpdateRoleInformation(Sys.Model.DBModels.Sys_Role)">
+            <summary>
+            更新角色信息
+            </summary>
+            <param name="role">角色信息</param>
+            <returns></returns>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.UserInfoController">
             <summary>
             用户信息
             </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetUserInformation(System.Int32)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="id">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.LoginOut">
+            <summary>
+            注销登录
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>

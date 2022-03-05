@@ -94,6 +94,7 @@ export default {
             message: "请输入所有字段",
             type: "error",
           });
+          this.loading = false;
           return false;
         }
       });

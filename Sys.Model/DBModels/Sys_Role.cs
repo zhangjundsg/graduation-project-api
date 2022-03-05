@@ -37,5 +37,19 @@ namespace Sys.Model.DBModels
            /// </summary>           
            public string Remarks {get;set;}
 
+        /// <summary>
+        /// Desc:创建时间
+        /// Default:
+        /// Nullable:True
+        /// </summary>  
+        public DateTime CreateTime { get; set; } = DateTime.Now;
+
+        /// <summary>
+        /// Desc:是否启用
+        /// Default:
+        /// Nullable:False
+        /// </summary>  
+        public bool Enabled { get; set; } = true;
+
     }
 }

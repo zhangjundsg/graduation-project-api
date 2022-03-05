@@ -9,8 +9,9 @@ namespace Sys.CoreApi.Controllers
     /// <summary>
     /// 用户信息
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
+    [Authorize]
     public class UserInfoController : Controller
     {
         private readonly IUserInformationService _user;
@@ -18,8 +19,12 @@ namespace Sys.CoreApi.Controllers
         {
             _user = user;
         }
+        /// <summary>
+        /// 获取用户信息
+        /// </summary>
+        /// <param name="id">用户id</param>
+        /// <returns></returns>
         [HttpGet]
-        [Authorize]
         public JsonResult GetUserInformation(int id)
         {
             var userinfo = _user.GetUserInfo(id);
@@ -35,6 +40,10 @@ namespace Sys.CoreApi.Controllers
             }
             return Json(user);
         }
+        /// <summary>
+        /// 注销登录
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         public JsonResult LoginOut()
         {
