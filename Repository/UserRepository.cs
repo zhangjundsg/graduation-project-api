@@ -18,6 +18,27 @@ namespace Sys.Repository
             return db.Queryable<Sys_User>().Where(i => i.UserID == id).ToList();
         }
 
+        public List<Sys_User> GetUserInfo(int userID)
+        {
+            using var db = DbConnection.Instance;
+            var list = db.Queryable<Sys_User, Sys_Role, Sys_Department>((u, r, d)
+                  => new JoinQueryInfos(
+                      JoinType.Left, u.RoleID == r.RoleID,
+                      JoinType.Left, u.DepartmentID == d.DepartmentID
+                      )
+            ).Where(u => u.UserID == userID)
+            .Select((u, r, d) => new Sys_User
+            {
+                Name = u.Name,
+                Email = u.Email,
+                RegisterTime = u.RegisterTime,
+                UserImg=u.UserImg,
+                Role = r,
+                Department = d
+            }).ToList();
+            return list;
+        }
+
         public List<Sys_User> IsSuccess(string UserName, string UserPwd)
         {
             using var db = DbConnection.Instance;

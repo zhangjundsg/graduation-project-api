@@ -11,5 +11,6 @@ namespace Sys.IRepository
         List<Sys_User> IsSuccess(string UserName,string UserPwd);
         List<Sys_User> GetAll(int id);
         int RelevancyRoleCount(int roleID);
+        List<Sys_User> GetUserInfo(int userID);
     }
 }

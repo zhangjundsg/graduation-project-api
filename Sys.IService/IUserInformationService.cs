@@ -8,5 +8,6 @@ namespace Sys.IService
     public interface IUserInformationService
     {
         List<Sys_User> GetUserInfo(int id);
+        List<Sys_User> GetDetailInfo(int id);
     }
 }

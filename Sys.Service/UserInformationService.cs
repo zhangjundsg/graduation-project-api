@@ -14,6 +14,12 @@ namespace Sys.Service
         {
             _user = user;
         }
+
+        public List<Sys_User> GetDetailInfo(int id)
+        {
+            return _user.GetUserInfo(id);  
+        }
+
         public List<Sys_User> GetUserInfo(int id)
         {
             return _user.GetAll(id);

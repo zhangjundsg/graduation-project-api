@@ -70,6 +70,13 @@
             <param name="id">用户id</param>
             <returns></returns>
         </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetDetailUserInformation(System.Int32)">
+            <summary>
+            获取用户、角色、部门信息
+            </summary>
+            <param name="id">用户id</param>
+            <returns></returns>
+        </member>
         <member name="M:Sys.CoreApi.Controllers.UserInfoController.LoginOut">
             <summary>
             注销登录

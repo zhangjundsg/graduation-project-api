@@ -11,7 +11,6 @@ namespace Sys.CoreApi.Controllers
     /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [Authorize]
     public class UserInfoController : Controller
     {
         private readonly IUserInformationService _user;
@@ -25,6 +24,7 @@ namespace Sys.CoreApi.Controllers
         /// <param name="id">用户id</param>
         /// <returns></returns>
         [HttpGet]
+        [Authorize]
         public JsonResult GetUserInformation(int id)
         {
             var userinfo = _user.GetUserInfo(id);
@@ -37,6 +37,27 @@ namespace Sys.CoreApi.Controllers
                 user.UserImg = item.UserImg;
                 user.Email=item.Email;
                 user.Name= item.Name;
+            }
+            return Json(user);
+        }
+        /// <summary>
+        /// 获取用户、角色、部门信息
+        /// </summary>
+        /// <param name="id">用户id</param>
+        /// <returns></returns>
+        [HttpGet]
+        public JsonResult GetDetailUserInformation(int id)
+        {
+            var userinfo = _user.GetDetailInfo(id);
+            Sys_User user = new Sys_User();
+            foreach (var item in userinfo)
+            {
+                user.Email = item.Email;
+                user.Name = item.Name;
+                user.UserImg = item.UserImg;
+                user.RegisterTime = item.RegisterTime;
+                user.Role=item.Role;
+                user.Department=item.Department;
             }
             return Json(user);
         }

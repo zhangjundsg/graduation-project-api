@@ -12,6 +12,7 @@ export const initMenu = (router, store) => {
     getRequest('/api/Menu/?id=' + userid).then(data => {
         if (!data) {
             Message.error('暂无菜单数据,请联系管理员');
+            router.replace('/');
         } else {
             //格式化路由
             let Routes = formatRoutes(data);

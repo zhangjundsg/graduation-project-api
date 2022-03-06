@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SqlSugar;
@@ -78,6 +79,12 @@ namespace Sys.Model.DBModels
            /// Nullable:False
            /// </summary>           
            public int DepartmentID {get;set;}
+
+        [SugarColumn(IsIgnore = true)]
+        public Sys_Role Role { get; set; }
+
+        [SugarColumn(IsIgnore = true)]
+        public Sys_Department Department { get; set; }
 
     }
 }
