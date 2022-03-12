@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Sys.IService;
 using Sys.Model;
 using Sys.Model.DBModels;
+using System.Threading.Tasks;
 
 namespace Sys.CoreApi.Controllers
 {
@@ -25,20 +26,10 @@ namespace Sys.CoreApi.Controllers
         /// <returns></returns>
         [HttpGet]
         [Authorize]
-        public JsonResult GetUserInformation(int id)
+        public async Task<JsonResult> GetUserInformation(int id)
         {
-            var userinfo = _user.GetUserInfo(id);
-            Sys_User user = new Sys_User();
-            foreach (var item in userinfo)
-            {
-                user.UserID = item.UserID;
-                user.UserName = item.UserName;
-                user.Email= item.Email;
-                user.UserImg = item.UserImg;
-                user.Email=item.Email;
-                user.Name= item.Name;
-            }
-            return Json(user);
+            var userinfo = await _user.GetUserInfo(id);
+            return Json(new Sys_User { UserID = userinfo.UserID, RoleID = userinfo.RoleID, Name = userinfo.Name, UserImg = userinfo.UserImg, Email = userinfo.Email, RegisterTime = userinfo.RegisterTime, DepartmentID = userinfo.DepartmentID });
         }
         /// <summary>
         /// 获取用户、角色、部门信息
@@ -46,21 +37,12 @@ namespace Sys.CoreApi.Controllers
         /// <param name="id">用户id</param>
         /// <returns></returns>
         [HttpGet]
-        public JsonResult GetDetailUserInformation(int id)
+        [Authorize]
+        public async Task<JsonResult> GetDetailUserInformation(int id)
         {
-            var userinfo = _user.GetDetailInfo(id);
-            Sys_User user = new Sys_User();
-            foreach (var item in userinfo)
-            {
-                user.Email = item.Email;
-                user.Name = item.Name;
-                user.UserImg = item.UserImg;
-                user.RegisterTime = item.RegisterTime;
-                user.Role=item.Role;
-                user.Department=item.Department;
-            }
-            return Json(user);
-        }
+            var userinfo = await _user.GetDetailInfo(id);
+            return Json(userinfo);
+        }       
         /// <summary>
         /// 注销登录
         /// </summary>

@@ -2,15 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Sys.IRepository
 {
     public interface IRoleRepository: IBaseRepository<Sys_Role>
     {
-        List<Sys_Role> GetAll();
-
-        bool DeleteRoleById(int roleID);
-
-        bool DeleteRoleListById(int[] list);
+        Task<bool> DeleteRoleListById(int[] list);
     }
 }

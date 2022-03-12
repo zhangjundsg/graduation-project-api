@@ -84,9 +84,10 @@ export default {
             window.sessionStorage.setItem("token", token);
             window.sessionStorage.setItem("userid", userid);
             let path = this.$route.query.redirect;
-            this.$router.replace(
-              path == "/" || path == undefined ? "/home" : path
-            );
+            if (path == "/" || path == undefined) {
+              path = "/home";
+            }
+            this.$router.replace(path);
           });
         } else {
           this.$message({

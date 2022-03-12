@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sys.IService;
+using System.Threading.Tasks;
 
 namespace Sys.CoreApi.Controllers
 {
@@ -21,9 +22,9 @@ namespace Sys.CoreApi.Controllers
         /// 获取菜单列表
         /// </summary>
         [HttpGet]
-        public JsonResult GetMenuList(int id)
+        public async Task<JsonResult> GetMenuList(int id)
         {
-            var list = _menuList.MenuList(id);
+            var list = await _menuList.MenuList(id);
             return Json(list);
         }
     }

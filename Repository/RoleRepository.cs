@@ -4,27 +4,16 @@ using Sys.Repository.DbHelper;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Sys.Repository
 {
     internal class RoleRepository : BaseRepository<Sys_Role>, IRoleRepository
     {
       
-        public List<Sys_Role> GetAll()
+        public async Task<bool> DeleteRoleListById(int[] list)
         {
-            using var db = DbConnection.Instance;
-            return db.Queryable<Sys_Role>().ToList();
-        }
-        public bool DeleteRoleById(int roleID)
-        {
-            using var db = DbConnection.Instance;
-            return db.Deleteable<Sys_Role>().In(roleID).ExecuteCommand() > 0;
-        }
-
-        public bool DeleteRoleListById(int[] list)
-        {
-            using var db = DbConnection.Instance;
-            return db.Deleteable<Sys_Role>().In(list).ExecuteCommand() > 0;
+            return await base.Context.Deleteable<Sys_Role>().In(list).ExecuteCommandAsync() > 0;
         }
     }
 }

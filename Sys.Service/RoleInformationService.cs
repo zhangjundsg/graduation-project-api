@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Sys.IRepository;
+using System.Threading.Tasks;
 
 namespace Sys.Service
 {
@@ -17,21 +18,21 @@ namespace Sys.Service
             _userRepository = userRepository;
         }
 
-        public List<Sys_Role> GetRoleList()
+        public async Task<List<Sys_Role>> GetRoleList()
         {
-            var list = _roleRepository.GetAll();
+            var list = await _roleRepository.GetListAsync();
             return list;
         }
-        public bool AddRoleInfo(Sys_Role role)
+        public async Task<bool> AddRoleInfo(Sys_Role role)
         {
-            return _roleRepository.Insert(role);
+            return await _roleRepository.InsertAsync(role);
         }
 
-        public bool DeleteRoleInfo(int roleID)
+        public async Task<bool> DeleteRoleInfo(int roleID)
         {
-            if (_userRepository.RelevancyRoleCount(roleID) < 1)
+            if (await _userRepository.AsQueryable().Where(i => i.RoleID == roleID).CountAsync() < 1)
             {
-                return _roleRepository.DeleteRoleById(roleID);
+                return await _roleRepository.DeleteByIdAsync(roleID);
             }
             else
             {
@@ -39,14 +40,14 @@ namespace Sys.Service
             }
         }
 
-        public bool UpdayeRoleInfo(Sys_Role role)
+        public async Task<bool> UpdateRoleInfo(Sys_Role role)
         {
-            return _roleRepository.Update(role);
+            return await _roleRepository.UpdateAsync(role);
         }
 
-        public bool DeleteRoleInfoList(int[] list)
+        public async Task<bool> DeleteRoleInfoList(int[] list)
         {
-            return _roleRepository.DeleteRoleListById(list);
+            return await _roleRepository.DeleteRoleListById(list);
         }
     }
 }

@@ -2,12 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Sys.IService
 {
     public interface IUserInformationService
     {
-        List<Sys_User> GetUserInfo(int id);
-        List<Sys_User> GetDetailInfo(int id);
+        Task<Sys_User> GetUserInfo(int id);
+        Task<List<Sys_User>> GetDetailInfo(int id);
     }
 }

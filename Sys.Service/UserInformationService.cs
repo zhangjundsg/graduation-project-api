@@ -4,6 +4,7 @@ using Sys.Model.DBModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Sys.Service
 {
@@ -15,14 +16,14 @@ namespace Sys.Service
             _user = user;
         }
 
-        public List<Sys_User> GetDetailInfo(int id)
+        public async Task<List<Sys_User>> GetDetailInfo(int id)
         {
-            return _user.GetUserInfo(id);  
+            return await _user.GetUserInfo(id);  
         }
 
-        public List<Sys_User> GetUserInfo(int id)
+        public async Task<Sys_User> GetUserInfo(int id)
         {
-            return _user.GetAll(id);
+            return await _user.GetByIdAsync(id);
         }
     }
 }

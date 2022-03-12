@@ -13,10 +13,9 @@ namespace Sys.Repository
 {
     public class MenuRepository : BaseRepository<Sys_Menu>, IMenuRepository
     {
-        public List<Sys_Menu> MenuInfo(int UserID)
+        public async Task<List<Sys_Menu>> MenuInfo(int UserID)
         {
-            using var db = DbConnection.Instance;
-            var list = db.Queryable<Sys_User, Sys_UserRole, Sys_Role, Sys_RoleMenu, Sys_Menu>((u, ur, r, rm, m)
+            var list = await base.Context.Queryable<Sys_User, Sys_UserRole, Sys_Role, Sys_RoleMenu, Sys_Menu>((u, ur, r, rm, m)
                   => u.UserID == ur.UserID
                   && ur.RoleID == r.RoleID
                   && r.RoleID == rm.RoleID
@@ -32,7 +31,7 @@ namespace Sys.Repository
                     ParentID = m.ParentID,
                     MenuEnabled = m.MenuEnabled,
                     Remarks = m.Remarks
-                }).ToList();
+                }).ToListAsync();
             return list;
         }
     }

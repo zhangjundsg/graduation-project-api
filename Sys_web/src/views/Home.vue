@@ -78,16 +78,16 @@
         </div>
         <div style="margin-top: 8px">
           职位标签：<el-tag size="small" type="success">{{
-            userInfo.role.roleName
+            role.roleName
           }}</el-tag>
         </div>
         <div style="margin-top: 8px">
           部门标签：<el-tag type="danger" size="small">{{
-            userInfo.department.departmentName
+            department.departmentName
           }}</el-tag>
           <div style="display: inline-block; margin-left: 40px">
             部门电话：<el-tag type="danger" size="small">{{
-              userInfo.department.departmentTel
+              department.departmentTel
             }}</el-tag>
           </div>
         </div>
@@ -110,6 +110,8 @@ export default {
       user: JSON.parse(window.sessionStorage.getItem("userInfo")),
       dialogVisible: false,
       userInfo: {},
+      department: {},
+      role: {},
     };
   },
   computed: {
@@ -127,7 +129,9 @@ export default {
         "/api/UserInfo/GetDetailUserInformation/?id=" + userid
       ).then((resp) => {
         if (resp) {
-          this.userInfo = resp;
+          this.userInfo = resp[0];
+          this.department = resp[0].department;
+          this.role = resp[0].role;
         }
       });
     },

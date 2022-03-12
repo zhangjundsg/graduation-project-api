@@ -12,16 +12,10 @@ namespace Sys.Repository
 {
     public class UserRepository : BaseRepository<Sys_User>, IUserRepository
     {
-        public List<Sys_User> GetAll(int id)
+       
+        public async Task<List<Sys_User>> GetUserInfo(int userID)
         {
-            using var db = DbConnection.Instance;
-            return db.Queryable<Sys_User>().Where(i => i.UserID == id).ToList();
-        }
-
-        public List<Sys_User> GetUserInfo(int userID)
-        {
-            using var db = DbConnection.Instance;
-            var list = db.Queryable<Sys_User, Sys_Role, Sys_Department>((u, r, d)
+            var list = await base.Context.Queryable<Sys_User, Sys_Role, Sys_Department>((u, r, d)
                   => new JoinQueryInfos(
                       JoinType.Left, u.RoleID == r.RoleID,
                       JoinType.Left, u.DepartmentID == d.DepartmentID
@@ -35,20 +29,13 @@ namespace Sys.Repository
                 UserImg=u.UserImg,
                 Role = r,
                 Department = d
-            }).ToList();
+            }).ToListAsync();
             return list;
         }
 
         public List<Sys_User> IsSuccess(string UserName, string UserPwd)
         {
-            using var db = DbConnection.Instance;
-            return db.Queryable<Sys_User>().Where(i => i.UserName == UserName && i.UserPassword == UserPwd).ToList();
-        }
-
-        public int RelevancyRoleCount(int roleID)
-        {
-            using var db = DbConnection.Instance;
-            return db.Queryable<Sys_User>().Where(i => i.RoleID == roleID).Count();
+            return base.Context.Queryable<Sys_User>().Where(i => i.UserName == UserName && i.UserPassword == UserPwd).ToList();
         }
     }
 }

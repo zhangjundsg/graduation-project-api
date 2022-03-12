@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Sys.IService;
 using Sys.Model;
 using Sys.Model.DBModels;
+using System.Threading.Tasks;
 
 namespace Sys.CoreApi.Controllers
 {
@@ -21,9 +22,9 @@ namespace Sys.CoreApi.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        public JsonResult GetRoleInformation()
+        public async Task<JsonResult> GetRoleInformation()
         {
-            var RoleList = _roleInformationService.GetRoleList();
+            var RoleList = await _roleInformationService.GetRoleList();
             return Json(RoleList);
         }
        /// <summary>
@@ -32,9 +33,9 @@ namespace Sys.CoreApi.Controllers
        /// <param name="role">信息内容</param>
        /// <returns></returns>
         [HttpPost]
-        public JsonResult AddRoleInformation(Sys_Role role)
+        public async Task<JsonResult> AddRoleInformation(Sys_Role role)
         {
-            if (_roleInformationService.AddRoleInfo(role))
+            if (await _roleInformationService.AddRoleInfo(role))
             {
                 return Json(new { Code = ResponseCode.Success, Msg = "添加成功" });
             }
@@ -50,9 +51,9 @@ namespace Sys.CoreApi.Controllers
         /// <param name="RoleID">角色ID</param>
         /// <returns></returns>
         [HttpDelete]
-        public JsonResult DelRoleInformation(int RoleID)
+        public async Task<JsonResult> DelRoleInformation(int RoleID)
         {
-            if (_roleInformationService.DeleteRoleInfo(RoleID))
+            if (await _roleInformationService.DeleteRoleInfo(RoleID))
             {
                 return Json(new { Code = ResponseCode.Success, Msg = "删除成功" });
             }
@@ -68,10 +69,10 @@ namespace Sys.CoreApi.Controllers
         /// <param name="list">角色ID数组</param>
         /// <returns></returns>
         [HttpPost]
-        public JsonResult DelRoleInformationArry(int[] list)
+        public async Task<JsonResult> DelRoleInformationArry(int[] list)
         {
 
-            if (_roleInformationService.DeleteRoleInfoList(list))
+            if (await _roleInformationService.DeleteRoleInfoList(list))
             {
                 return Json(new { Code = ResponseCode.Success, Msg = "删除成功" });
             }
@@ -87,9 +88,9 @@ namespace Sys.CoreApi.Controllers
         /// <param name="role">角色信息</param>
         /// <returns></returns>
         [HttpPut]
-        public JsonResult UpdateRoleInformation(Sys_Role role)
+        public async Task<JsonResult> UpdateRoleInformation(Sys_Role role)
         {
-            if (_roleInformationService.UpdayeRoleInfo(role))
+            if (await _roleInformationService.UpdateRoleInfo(role))
             {
                 return Json(new { Code = ResponseCode.Success, Msg = "更新成功" });
             }

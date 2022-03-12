@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using Sys.Model.DBModels;
 using Sys.Common;
+using System.Threading.Tasks;
 
 namespace Sys.Service
 {
@@ -16,9 +17,9 @@ namespace Sys.Service
         {
             _iMenu = iMenu;
         }
-        List<Sys_Menu> IMenuService.MenuList(int id)
+        public async Task<List<Sys_Menu>> MenuList(int id)
         {
-            var list = _iMenu.MenuInfo(id);
+            var list = await _iMenu.MenuInfo(id);
             var menu = Tree.GetMenuTree(list, 0);
             return menu;
         }

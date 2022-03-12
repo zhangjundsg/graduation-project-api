@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Sys.IService
 {
     public interface IMenuService
     {
-        List<Sys_Menu> MenuList(int id);
+        Task<List<Sys_Menu>> MenuList(int id);
     }
 }
