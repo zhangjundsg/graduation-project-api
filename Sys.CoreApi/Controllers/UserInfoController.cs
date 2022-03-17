@@ -29,7 +29,17 @@ namespace Sys.CoreApi.Controllers
         public async Task<JsonResult> GetUserInformation(int id)
         {
             var userinfo = await _user.GetUserInfo(id);
-            return Json(new Sys_User { UserID = userinfo.UserID, RoleID = userinfo.RoleID, Name = userinfo.Name, UserImg = userinfo.UserImg, Email = userinfo.Email, RegisterTime = userinfo.RegisterTime, DepartmentID = userinfo.DepartmentID });
+            Sys_User user = new Sys_User()
+            { 
+                UserID = userinfo.UserID, 
+                RoleID = userinfo.RoleID,
+                Name = userinfo.Name, 
+                UserImg = userinfo.UserImg, 
+                Email = userinfo.Email,
+                RegisterTime = userinfo.RegisterTime, 
+                DepartmentID = userinfo.DepartmentID 
+            };
+            return Json(user);
         }
         /// <summary>
         /// 获取用户、角色、部门信息

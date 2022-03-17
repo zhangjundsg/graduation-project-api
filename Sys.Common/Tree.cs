@@ -17,6 +17,7 @@ namespace Sys.Common
                 for (int i = 0; i < menuValue.Count; i++)
                 {
                     Sys_Menu menu = new Sys_Menu();
+                    menu.MenuID = menuValue[i].MenuID;
                     menu.ParentID = menuValue[i].ParentID;
                     menu.MenuUrl = menuValue[i].MenuUrl;
                     menu.MenuPath = menuValue[i].MenuPath;

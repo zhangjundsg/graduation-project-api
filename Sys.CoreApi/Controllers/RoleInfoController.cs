@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Sys.CoreApi.Controllers
 {
+    /// <summary>
+    /// 角色信息
+    /// </summary>
     [Route("api/[controller]/[action]")]
     [ApiController]
     [Authorize]

@@ -13,6 +13,8 @@ namespace Sys.Repository
 {
     public class MenuRepository : BaseRepository<Sys_Menu>, IMenuRepository
     {
+       
+
         public async Task<List<Sys_Menu>> MenuInfo(int UserID)
         {
             var list = await base.Context.Queryable<Sys_User, Sys_UserRole, Sys_Role, Sys_RoleMenu, Sys_Menu>((u, ur, r, rm, m)
@@ -34,5 +36,22 @@ namespace Sys.Repository
                 }).ToListAsync();
             return list;
         }
+        public async Task<List<Sys_Menu>> MenuInfoByRoleID(int RoleID)
+        {
+            var list = await base.Context.Queryable<Sys_Role, Sys_RoleMenu, Sys_Menu>((r, rm, m)
+                 => new JoinQueryInfos(
+                     JoinType.Left, r.RoleID == rm.RoleID,
+                     JoinType.Left, rm.MenuID == m.MenuID
+                     )
+           ).Where(r => r.RoleID == RoleID)
+           .Where((r, rm, m) => m.MenuID > 1000)
+           .Select((r, rm, m) => new Sys_Menu
+           {
+               MenuID = m.MenuID
+           }).ToListAsync();
+
+            return list;
+        }
+
     }
 }

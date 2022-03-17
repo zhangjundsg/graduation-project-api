@@ -21,7 +21,34 @@
         </member>
         <member name="M:Sys.CoreApi.Controllers.MenuController.GetMenuList(System.Int32)">
             <summary>
-            获取菜单列表
+            根据用户ID获取菜单
+            </summary>
+            <param name="id">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.GetAllMenuList">
+            <summary>
+            获取所有菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.GetMenuArray(System.Int32)">
+            <summary>
+            根据角色ID获取菜单数组
+            </summary>
+            <param name="roleID">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.UpdateMenu(Sys.Model.UpdateMenuDto)">
+            <summary>
+            更新角色菜单
+            </summary>
+            <param name="menuDto">菜单数据及角色id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.RoleInfoController">
+            <summary>
+            角色信息
             </summary>
         </member>
         <member name="M:Sys.CoreApi.Controllers.RoleInfoController.GetRoleInformation">

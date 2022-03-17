@@ -9,5 +9,7 @@ namespace Sys.IRepository
     public interface IMenuRepository: IBaseRepository<Sys_Menu>
     {
         Task<List<Sys_Menu>> MenuInfo(int UserID);
+        Task<List<Sys_Menu>> MenuInfoByRoleID(int RoleID);
+       
     }
 }

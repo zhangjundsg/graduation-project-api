@@ -8,6 +8,10 @@ namespace Sys.IService
 {
     public interface IMenuService
     {
-        Task<List<Sys_Menu>> MenuList(int id);
+        Task<List<Sys_Menu>> MenuListByID(int id);
+        Task<List<Sys_Menu>> AllMenuList();
+        Task<List<int>> MenuArrayByRoleID(int roleID);
+
+        Task<bool> UpdateMenu(int roleID, List<int> MenuID);
     }
 }
