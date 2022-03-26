@@ -12,7 +12,7 @@ namespace Sys.Repository
 {
     public class UserRepository : BaseRepository<Sys_User>, IUserRepository
     {
-       
+
         public async Task<List<Sys_User>> GetUserInfo(int userID)
         {
             var list = await base.Context.Queryable<Sys_User, Sys_Role, Sys_Department>((u, r, d)

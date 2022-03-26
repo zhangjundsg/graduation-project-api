@@ -10,7 +10,6 @@
           </span>
           <el-dropdown-menu slot="dropdown" class="user">
             <el-dropdown-item command="userinfo">个人中心</el-dropdown-item>
-            <el-dropdown-item command="setting">设置</el-dropdown-item>
             <el-dropdown-item command="outlogin">退出</el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
@@ -53,51 +52,45 @@
         </el-main>
       </el-container>
     </el-container>
-    <el-dialog :visible.sync="dialogVisible" width="30%" title="个人中心">
+    <el-dialog :visible.sync="dialogVisible" width="30%">
       <el-card
         class="box-card"
         shadow="hover"
         :body-style="{ padding: '10px' }"
+        style="width: 100%"
       >
         <div slot="header">
           <span>{{ userInfo.name }}</span>
         </div>
         <div style="text-align: center">
           <img
-            title="点击更换头像"
             :src="userInfo.userImg"
             alt=""
             style="width: 80px; height: 80px; border-radius: 40px"
           />
         </div>
-        <div style="margin-top: 8px">
+        <div style="margin-top: 8px; margin-left: 50px">
           加入时间：<el-tag size="small">{{ userInfo.registerTime }}</el-tag>
         </div>
-        <div style="margin-top: 8px">
+        <div style="margin-top: 8px; margin-left: 50px">
           邮箱地址：<el-tag size="small">{{ userInfo.email }}</el-tag>
         </div>
-        <div style="margin-top: 8px">
+        <div style="margin-top: 8px; margin-left: 50px">
           职位标签：<el-tag size="small" type="success">{{
             role.roleName
           }}</el-tag>
         </div>
-        <div style="margin-top: 8px">
+        <div style="margin-top: 8px; margin-left: 50px">
           部门标签：<el-tag type="danger" size="small">{{
             department.departmentName
           }}</el-tag>
-          <div style="display: inline-block; margin-left: 40px">
-            部门电话：<el-tag type="danger" size="small">{{
-              department.departmentTel
-            }}</el-tag>
-          </div>
+        </div>
+        <div style="margin-top: 8px; margin-left: 50px">
+          部门电话：<el-tag type="danger" size="small">{{
+            department.departmentTel
+          }}</el-tag>
         </div>
       </el-card>
-      <span slot="footer" class="dialog-footer">
-        <el-button @click="dialogVisible = false" size="small">取 消</el-button>
-        <el-button type="primary" @click="dialogVisible = false" size="small"
-          >确 定</el-button
-        >
-      </span>
     </el-dialog>
   </div>
 </template>

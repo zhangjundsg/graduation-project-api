@@ -1,4 +1,5 @@
-﻿using Sys.Model.DBModels;
+﻿using Sys.Model;
+using Sys.Model.DBModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,5 +11,6 @@ namespace Sys.IService
     {
         Task<Sys_User> GetUserInfo(int id);
         Task<List<Sys_User>> GetDetailInfo(int id);
+        Task<List<UserEmail>> GetUserEmialAll();
     }
 }

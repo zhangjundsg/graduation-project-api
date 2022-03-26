@@ -1,5 +1,6 @@
 ﻿using Sys.IRepository;
 using Sys.IService;
+using Sys.Model;
 using Sys.Model.DBModels;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,19 @@ namespace Sys.Service
         public async Task<List<Sys_User>> GetDetailInfo(int id)
         {
             return await _user.GetUserInfo(id);  
+        }
+        public async Task<List<UserEmail>> GetUserEmialAll()
+        {
+            var list = await _user.GetListAsync();
+            List<UserEmail> ue = new List<UserEmail>();
+            list.ForEach(i =>
+            {
+                UserEmail userEmail = new UserEmail();
+                userEmail.Name = i.Name;
+                userEmail.Email = i.Email;
+                ue.Add(userEmail);
+            });
+            return ue;
         }
 
         public async Task<Sys_User> GetUserInfo(int id)

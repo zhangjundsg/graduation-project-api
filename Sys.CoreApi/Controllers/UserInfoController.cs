@@ -62,5 +62,16 @@ namespace Sys.CoreApi.Controllers
         {
             return Json(new { code = ResponseCode.Success, msg = "注销成功！" });
         }
+        /// <summary>
+        /// 获取全部用户邮箱
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorize]
+        public async Task<JsonResult> GetUserEmailAll()
+        {
+            var userList = await _user.GetUserEmialAll();
+            return Json(userList);
+        }
     }
 }

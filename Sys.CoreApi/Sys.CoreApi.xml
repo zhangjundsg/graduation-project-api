@@ -85,6 +85,11 @@
             <param name="role">角色信息</param>
             <returns></returns>
         </member>
+        <member name="T:Sys.CoreApi.Controllers.SendEmailController">
+            <summary>
+            邮件发送
+            </summary>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.UserInfoController">
             <summary>
             用户信息
@@ -107,6 +112,12 @@
         <member name="M:Sys.CoreApi.Controllers.UserInfoController.LoginOut">
             <summary>
             注销登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetUserEmailAll">
+            <summary>
+            获取全部用户邮箱
             </summary>
             <returns></returns>
         </member>
