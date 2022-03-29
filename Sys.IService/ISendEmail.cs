@@ -2,11 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Sys.IService
 {
     public interface ISendEmail
     {
-        string SendSysEmail(SendEmail sm);
+        Task<string> SendEmailAsync(SendEmail sm);
     }
 }

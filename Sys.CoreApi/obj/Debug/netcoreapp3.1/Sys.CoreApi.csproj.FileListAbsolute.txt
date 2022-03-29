@@ -127,3 +127,9 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Repository.pdb
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Service.pdb
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.Common.pdb
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Sys.IRepository.pdb
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\MailKit.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll

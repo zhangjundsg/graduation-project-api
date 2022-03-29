@@ -278,9 +278,19 @@
             发送人
             </summary>
         </member>
+        <member name="P:Sys.Model.SendEmail.fromPersonName">
+            <summary>
+            发送人名称
+            </summary>
+        </member>
         <member name="P:Sys.Model.SendEmail.recipientArry">
             <summary>
             收件人地址
+            </summary>
+        </member>
+        <member name="P:Sys.Model.SendEmail.recipientName">
+            <summary>
+            收件人名称
             </summary>
         </member>
         <member name="P:Sys.Model.SendEmail.mailTitle">
@@ -295,17 +305,12 @@
         </member>
         <member name="P:Sys.Model.SendEmail.code">
             <summary>
-            客户端授权码(可存在配置文件中)
+            客户端授权码
             </summary>
         </member>
         <member name="P:Sys.Model.SendEmail.host">
             <summary>
             SMTP邮件服务器
-            </summary>
-        </member>
-        <member name="P:Sys.Model.SendEmail.isbodyHtml">
-            <summary>
-            正文是否是html格式
             </summary>
         </member>
         <member name="P:Sys.Model.UserEmail.Name">

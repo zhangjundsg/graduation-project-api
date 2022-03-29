@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Sys.IService;
 using Sys.Model;
+using System.Threading.Tasks;
 
 namespace Sys.CoreApi.Controllers
 {
@@ -19,9 +20,10 @@ namespace Sys.CoreApi.Controllers
             _sendEmail = sendEmail;
         }
         [HttpPost]
-        public JsonResult Send(SendEmail sm)
+        public async Task<JsonResult> Send(SendEmail sm)
         {
-            return Json(new { Code = ResponseCode.Success, Msg = _sendEmail.SendSysEmail(sm) });
+            var result = await _sendEmail.SendEmailAsync(sm);
+            return Json(new { Code = ResponseCode.Success, Msg = result });
         }
     }
 }

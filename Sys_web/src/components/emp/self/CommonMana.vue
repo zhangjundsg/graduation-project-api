@@ -101,6 +101,8 @@ export default {
       state: "",
       emailTitle: "",
       EmailText: "",
+      sendUser: "",
+      toUser: "",
     };
   },
   mounted() {
@@ -126,6 +128,9 @@ export default {
       };
     },
     initEmailAll() {
+      let user = JSON.parse(window.sessionStorage.getItem("userInfo"));
+      this.sendUser = user.name;
+
       this.getRequest("/api/UserInfo/GetUserEmailAll").then((resp) => {
         if (resp) {
           this.userEmailAll = resp;
@@ -134,6 +139,7 @@ export default {
     },
     handleSelect(item) {
       this.state = item.email;
+      this.toUser = item.name;
     },
     handleClose(done) {
       done();
@@ -142,6 +148,8 @@ export default {
       if (this.state && this.emailTitle && this.EmailText) {
         this.loading = true;
         let SendEmail = {
+          fromPersonName: this.sendUser,
+          recipient: this.toUser,
           recipientArry: this.state,
           mailTitle: this.emailTitle,
           mailBody: this.EmailText,

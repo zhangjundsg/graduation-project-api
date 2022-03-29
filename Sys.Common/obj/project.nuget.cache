@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ikkA3qwYRfKgyrInRxiBovT6wfK+1rkn0Tb4SVgphENBlQGRosVmuBSZkDtjIRmvB+Btj0jSiBef3mS5jgWxJA==",
+  "dgSpecHash": "xeFSbQ9LZpncBoaWmEy1Zd7rUlToyiw1vZq2ZZca/yVbYMACqWVk9xTGKL7a/ulmF9AobEK4s349Ar+ZlZdAUA==",
   "success": true,
   "projectFilePath": "E:\\设计\\Sys.Common\\Sys.Common.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\zhang\\.nuget\\packages\\mysql.data\\8.0.21\\mysql.data.8.0.21.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\zhang\\.nuget\\packages\\nlog\\4.7.15\\nlog.4.7.15.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\npgsql\\5.0.7\\npgsql.5.0.7.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\oracle.manageddataaccess.core\\3.21.1\\oracle.manageddataaccess.core.3.21.1.nupkg.sha512",
     "C:\\Users\\zhang\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

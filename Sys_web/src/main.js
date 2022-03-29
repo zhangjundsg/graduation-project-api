@@ -2,6 +2,7 @@ import Vue from 'vue'
 import ElementUI, { TabPane } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'font-awesome/css/font-awesome.css'
+import * as echarts from 'echarts'
 
 import store from './store'
 import App from './App.vue'
@@ -20,6 +21,7 @@ Vue.prototype.postRequest = postRequest;
 Vue.prototype.putRequest = putRequest;
 Vue.prototype.getRequest = getRequest;
 Vue.prototype.deleteRequest = deleteRequest;
+Vue.prototype.echarts = echarts;
 
 router.beforeEach((to, from, next) => {
   if (window.sessionStorage.getItem('token')) {

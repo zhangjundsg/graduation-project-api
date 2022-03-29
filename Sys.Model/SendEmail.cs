@@ -12,9 +12,19 @@ namespace Sys.Model
         public string fromPerson { get; set; } = "zhangjun200135@163.com";
 
         /// <summary>
+        /// 发送人名称
+        /// </summary>
+        public string fromPersonName { get; set; }
+
+        /// <summary>
         /// 收件人地址
         /// </summary>
         public string recipientArry { get; set; }
+
+        /// <summary>
+        /// 收件人名称
+        /// </summary>
+        public string recipientName { get; set; }
 
         /// <summary>
         /// 标题
@@ -27,7 +37,7 @@ namespace Sys.Model
         public string mailBody { get; set; }
 
         /// <summary>
-        /// 客户端授权码(可存在配置文件中)
+        /// 客户端授权码
         /// </summary>
         public string code { get; set; } = "GEBFBXEXBLGRGWMC";
 
@@ -36,9 +46,5 @@ namespace Sys.Model
         /// </summary>
         public string host { get; set; }
 
-        /// <summary>
-        /// 正文是否是html格式
-        /// </summary>
-        public bool isbodyHtml { get; set; } = false;
     }
 }

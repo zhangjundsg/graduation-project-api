@@ -21,6 +21,7 @@
           v-model="loginForm.password"
           auto-complete="false"
           placeholder="密码"
+          show-password
         ></el-input>
       </el-form-item>
       <el-form-item prop="code">

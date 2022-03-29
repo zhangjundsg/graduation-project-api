@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Sys.CoreApi.AutoFuc;
+using Sys.CoreApi.Filter;
 using Sys.CoreApi.SetUpApiService;
 using Sys.Model;
 using System;
@@ -33,7 +34,7 @@ namespace Sys.CoreApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers(options => options.Filters.Add(new SystemExceptionFilter()));
             services.Configure<TokenManagement>(Configuration.GetSection("tokenConfig"));
 
             var token = Configuration.GetSection("tokenConfig").Get<TokenManagement>();
