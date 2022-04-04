@@ -62,9 +62,9 @@ namespace Sys.CoreApi.Controllers
         {
             if (await _menuService.UpdateMenu(menuDto.roleID, menuDto.menuID))
             {
-                return Json(new { Code = ResponseCode.Success, Msg = "更新成功" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "更新成功" });
             }
-            return Json(new { Code = ResponseCode.CodeError, Msg = "更新失败" });
+            return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "更新失败" });
         }
 
     }

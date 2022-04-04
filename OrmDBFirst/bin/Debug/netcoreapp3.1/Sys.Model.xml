@@ -273,6 +273,16 @@
             验证码
             </summary>
         </member>
+        <member name="P:Sys.Model.ResponseDto.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Sys.Model.ResponseDto.Msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
         <member name="P:Sys.Model.SendEmail.fromPerson">
             <summary>
             发送人
@@ -311,6 +321,11 @@
         <member name="P:Sys.Model.SendEmail.host">
             <summary>
             SMTP邮件服务器
+            </summary>
+        </member>
+        <member name="P:Sys.Model.SendEmail.files">
+            <summary>
+            附件名
             </summary>
         </member>
         <member name="P:Sys.Model.UserEmail.Name">

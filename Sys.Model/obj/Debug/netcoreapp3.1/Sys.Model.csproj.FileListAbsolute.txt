@@ -8,3 +8,4 @@ E:\设计\Sys.Model\obj\Debug\netcoreapp3.1\Sys.Model.csproj.CoreCompileInputs.c
 E:\设计\Sys.Model\obj\Debug\netcoreapp3.1\Sys.Model.dll
 E:\设计\Sys.Model\obj\Debug\netcoreapp3.1\Sys.Model.pdb
 E:\设计\Sys.Model\bin\Debug\netcoreapp3.1\Sys.Model.xml
+E:\设计\Sys.Model\obj\Debug\netcoreapp3.1\Sys.Model.csproj.AssemblyReference.cache

@@ -39,5 +39,10 @@ namespace Sys.Service
         {
             return await _user.GetByIdAsync(id);
         }
+        public async Task<UserInfoAllPage> GetAllInfo(int pageIndex, int pageSize)
+        {
+            var list = await _user.GetAll(pageIndex,pageSize);
+            return list;
+        }
     }
 }

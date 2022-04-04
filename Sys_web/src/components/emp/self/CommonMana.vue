@@ -67,7 +67,19 @@
             </div>
           </div>
           <div style="margin-top: 15px">
-            <el-tag style="width: 70px">附&nbsp;&nbsp;&nbsp;&nbsp;件：</el-tag>
+            <el-upload
+              style="width: 250px"
+              ref="upload"
+              action="api/FileUpLoad/UploadTemp"
+              :headers="uploadHeader"
+              :on-success="AddFiles"
+              :on-remove="RemoveFile"
+              :file-list="fileList"
+            >
+              <el-button slot="trigger" size="small" type="primary"
+                >附&nbsp;&nbsp;&nbsp;&nbsp;件：</el-button
+              >
+            </el-upload>
           </div>
           <div
             class="demo-drawer__content"
@@ -103,10 +115,22 @@ export default {
       EmailText: "",
       sendUser: "",
       toUser: "",
+      fileList: [],
+      fileNameList: [],
     };
   },
   mounted() {
     this.initEmailAll();
+  },
+  computed: {
+    uploadHeader: function () {
+      if (window.sessionStorage.getItem("token")) {
+        return {
+          Authorization: "Bearer " + window.sessionStorage.getItem("token"),
+        };
+      } else {
+      }
+    },
   },
   methods: {
     showDialog() {
@@ -143,6 +167,19 @@ export default {
     },
     handleClose(done) {
       done();
+      this.state = "";
+      this.emailTitle = "";
+      this.EmailText = "";
+      this.fileList = [];
+      this.fileNameList = [];
+    },
+    AddFiles(response, file, fileList) {
+      this.fileNameList.push(file.name);
+      console.log(this.fileNameList);
+    },
+    RemoveFile(file, fileList) {
+      this.fileNameList.pop(file.name);
+      console.log(this.fileNameList);
     },
     sendSysEmail() {
       if (this.state && this.emailTitle && this.EmailText) {
@@ -153,6 +190,7 @@ export default {
           recipientArry: this.state,
           mailTitle: this.emailTitle,
           mailBody: this.EmailText,
+          files: this.fileNameList,
         };
         this.postRequest("/api/SendEmail/Send", SendEmail).then((resp) => {
           if (resp) {
@@ -161,6 +199,8 @@ export default {
             this.state = "";
             this.emailTitle = "";
             this.EmailText = "";
+            this.fileList = [];
+            this.fileNameList = [];
           }
         });
       } else {
@@ -175,6 +215,8 @@ export default {
       this.state = "";
       this.emailTitle = "";
       this.EmailText = "";
+      this.fileList = [];
+      this.fileNameList = [];
     },
   },
 };

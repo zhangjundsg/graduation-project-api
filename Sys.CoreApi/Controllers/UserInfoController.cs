@@ -42,7 +42,7 @@ namespace Sys.CoreApi.Controllers
             return Json(user);
         }
         /// <summary>
-        /// 获取用户、角色、部门信息
+        /// 根据ID获取用户、角色、部门信息
         /// </summary>
         /// <param name="id">用户id</param>
         /// <returns></returns>
@@ -60,7 +60,7 @@ namespace Sys.CoreApi.Controllers
         [HttpPost]
         public JsonResult LoginOut()
         {
-            return Json(new { code = ResponseCode.Success, msg = "注销成功！" });
+            return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "注销成功！" });
         }
         /// <summary>
         /// 获取全部用户邮箱
@@ -72,6 +72,17 @@ namespace Sys.CoreApi.Controllers
         {
             var userList = await _user.GetUserEmialAll();
             return Json(userList);
+        }
+        /// <summary>
+        ///  获取用户所有信息
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorize]
+        public async Task<JsonResult> GetAllUserInformation(int pageIndex,int pageSize)
+        {
+            var list = await _user.GetAllInfo(pageIndex,pageSize);
+            return Json(list);
         }
     }
 }

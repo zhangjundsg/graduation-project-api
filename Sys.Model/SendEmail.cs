@@ -46,5 +46,10 @@ namespace Sys.Model
         /// </summary>
         public string host { get; set; }
 
+        /// <summary>
+        /// 附件名
+        /// </summary>
+        public List<string> files { get; set; }
+
     }
 }

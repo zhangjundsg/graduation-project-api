@@ -14,7 +14,7 @@
           </el-dropdown-menu>
         </el-dropdown>
       </el-header>
-      <el-container>
+      <el-container class="containerH">
         <el-aside width="200px">
           <el-menu router unique-opened>
             <el-submenu
@@ -184,5 +184,8 @@ export default {
 }
 .homeRouter {
   margin-top: 12px;
+}
+.containerH {
+  height: 800px;
 }
 </style>

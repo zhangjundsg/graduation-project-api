@@ -273,6 +273,16 @@
             验证码
             </summary>
         </member>
+        <member name="P:Sys.Model.ResponseDto.Code">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="P:Sys.Model.ResponseDto.Msg">
+            <summary>
+            返回信息
+            </summary>
+        </member>
         <member name="P:Sys.Model.SendEmail.fromPerson">
             <summary>
             发送人
@@ -313,6 +323,41 @@
             SMTP邮件服务器
             </summary>
         </member>
+        <member name="P:Sys.Model.SendEmail.files">
+            <summary>
+            附件名
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserAllInfo.UserID">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserAllInfo.Name">
+            <summary>
+            姓名
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserAllInfo.RegisterTime">
+            <summary>
+            入职时间
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserAllInfo.Email">
+            <summary>
+            联系邮箱
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserAllInfo.RoleName">
+            <summary>
+            职位
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserAllInfo.DepartmentName">
+            <summary>
+            部门
+            </summary>
+        </member>
         <member name="P:Sys.Model.UserEmail.Name">
             <summary>
             姓名
@@ -321,6 +366,26 @@
         <member name="P:Sys.Model.UserEmail.Email">
             <summary>
             邮箱
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserInfoAllPage.list">
+            <summary>
+            每页数据
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserInfoAllPage.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserInfoAllPage.PageSize">
+            <summary>
+            页大小
+            </summary>
+        </member>
+        <member name="P:Sys.Model.UserInfoAllPage.PageCount">
+            <summary>
+            总数
             </summary>
         </member>
     </members>

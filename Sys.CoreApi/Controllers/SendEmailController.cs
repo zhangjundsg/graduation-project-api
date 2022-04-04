@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Sys.IService;
 using Sys.Model;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Sys.CoreApi.Controllers
@@ -14,8 +15,8 @@ namespace Sys.CoreApi.Controllers
     [Authorize]
     public class SendEmailController : Controller
     {
-        private readonly ISendEmail _sendEmail;
-        public SendEmailController(ISendEmail sendEmail)
+        private readonly ISendEmailService _sendEmail;
+        public SendEmailController(ISendEmailService sendEmail)
         {
             _sendEmail = sendEmail;
         }
@@ -23,7 +24,7 @@ namespace Sys.CoreApi.Controllers
         public async Task<JsonResult> Send(SendEmail sm)
         {
             var result = await _sendEmail.SendEmailAsync(sm);
-            return Json(new { Code = ResponseCode.Success, Msg = result });
+            return Json(result);
         }
     }
 }

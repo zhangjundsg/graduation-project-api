@@ -1,0 +1,275 @@
+2022-04-04 00:02:09.0811|Sys.Common.NLogHelp|ERROR|
+【异常信息】：The process cannot access the file 'E:\System_Uploads\需求设计-计应（191）张俊.docx' because it is being used by another process. 
+【异常类型】：IOException 
+【堆栈调用】：
+   at System.IO.FileSystem.DeleteFile(String fullPath)
+   at System.IO.File.Delete(String path)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 49
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 00:03:10.4633|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Could not find file 'E:\System_Uploads\2022届毕业设计工作安排.doc概要设计-计-计应191（西）张俊.docx.docx'. 
+【异常类型】：FileNotFoundException 
+【堆栈调用】：
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 39
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 00:04:27.4363|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Could not find file 'E:\System_Uploads\概要设计-计-计应191（西）张俊.docx.docx需求设计-计应（191）张俊.docx'. 
+【异常类型】：FileNotFoundException 
+【堆栈调用】：
+   at System.IO.FileStream.ValidateFileHandle(SafeFileHandle fileHandle)
+   at System.IO.FileStream.CreateFileOpenHandle(FileMode mode, FileShare share, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.FileStream..ctor(String path, FileMode mode)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 39
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 00:13:11.8188|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Cannot access a closed file. 
+【异常类型】：ObjectDisposedException 
+【堆栈调用】：
+   at System.IO.FileStream.Seek(Int64 offset, SeekOrigin origin)
+   at MimeKit.MimeContent.WriteToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimeContent.DecodeToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimePart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.Multipart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.MimeMessage.WriteToAsync(FormatOptions options, Stream stream, Boolean headersOnly, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 66
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 00:21:05.9832|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Cannot access a closed file. 
+【异常类型】：ObjectDisposedException 
+【堆栈调用】：
+   at System.IO.FileStream.Seek(Int64 offset, SeekOrigin origin)
+   at MimeKit.MimeContent.WriteToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimeContent.DecodeToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimePart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.Multipart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.MimeMessage.WriteToAsync(FormatOptions options, Stream stream, Boolean headersOnly, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 73
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 00:22:06.8109|Sys.Common.NLogHelp|ERROR|
+【异常信息】：The process cannot access the file 'E:\System_Uploads\项目开发计划书-计应191（西）张俊.doc' because it is being used by another process. 
+【异常类型】：IOException 
+【堆栈调用】：
+   at System.IO.FileSystem.DeleteFile(String fullPath)
+   at System.IO.File.Delete(String path)
+   at Sys.Service.SendEmailService.<>c.<SendEmailAsync>b__0_0(String path) in E:\设计\Sys.Service\SendEmailService.cs:line 56
+   at System.Collections.Generic.List`1.ForEach(Action`1 action)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 53
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 00:24:22.2550|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Cannot access a closed file. 
+【异常类型】：ObjectDisposedException 
+【堆栈调用】：
+   at System.IO.FileStream.Seek(Int64 offset, SeekOrigin origin)
+   at MimeKit.MimeContent.WriteToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimeContent.DecodeToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimePart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.Multipart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.MimeMessage.WriteToAsync(FormatOptions options, Stream stream, Boolean headersOnly, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 74
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 11:05:54.8878|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Cannot access a closed file. 
+【异常类型】：ObjectDisposedException 
+【堆栈调用】：
+   at System.IO.FileStream.Seek(Int64 offset, SeekOrigin origin)
+   at MimeKit.MimeContent.WriteToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimeContent.DecodeToAsync(Stream stream, CancellationToken cancellationToken)
+   at MimeKit.MimePart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.Multipart.WriteToAsync(FormatOptions options, Stream stream, Boolean contentOnly, CancellationToken cancellationToken)
+   at MimeKit.MimeMessage.WriteToAsync(FormatOptions options, Stream stream, Boolean headersOnly, CancellationToken cancellationToken)
+   at MailKit.Net.Smtp.SmtpClient.DataAsync(FormatOptions options, MimeMessage message, Int64 size, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at MailKit.Net.Smtp.SmtpClient.SendAsync(FormatOptions options, MimeMessage message, MailboxAddress sender, IList`1 recipients, Boolean doAsync, CancellationToken cancellationToken, ITransferProgress progress)
+   at Sys.Service.SendEmailService.SendEmailAsync(SendEmail sm) in E:\设计\Sys.Service\SendEmailService.cs:line 65
+   at Sys.CoreApi.Controllers.SendEmailController.Send(SendEmail sm) in E:\设计\Sys.CoreApi\Controllers\SendEmailController.cs:line 26
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 15:05:47.3970|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Failed to convert parameter value from a RefAsync`1 to a String. 
+【异常类型】：InvalidCastException 
+【堆栈调用】：
+   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at Sys.Repository.UserRepository.GetAll(Int32 pageIndex, Int32 pageSize) in E:\设计\Repository\UserRepository.cs:line 44
+   at Sys.Service.UserInformationService.GetAllInfo(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.Service\UserInformationService.cs:line 44
+   at Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.CoreApi\Controllers\UserInfoController.cs:line 83
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 15:14:21.7801|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Failed to convert parameter value from a RefAsync`1 to a String. 
+【异常类型】：InvalidCastException 
+【堆栈调用】：
+   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at Sys.Repository.UserRepository.GetAll(Int32 pageIndex, Int32 pageSize) in E:\设计\Repository\UserRepository.cs:line 44
+   at Sys.Service.UserInformationService.GetAllInfo(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.Service\UserInformationService.cs:line 44
+   at Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.CoreApi\Controllers\UserInfoController.cs:line 83
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 15:16:25.6869|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Failed to convert parameter value from a RefAsync`1 to a String. 
+【异常类型】：InvalidCastException 
+【堆栈调用】：
+   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at Sys.Repository.UserRepository.GetAll(Int32 pageIndex, Int32 pageSize) in E:\设计\Repository\UserRepository.cs:line 44
+   at Sys.Service.UserInformationService.GetAllInfo(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.Service\UserInformationService.cs:line 44
+   at Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.CoreApi\Controllers\UserInfoController.cs:line 83
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 15:17:25.6338|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Failed to convert parameter value from a RefAsync`1 to a String. 
+【异常类型】：InvalidCastException 
+【堆栈调用】：
+   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at Sys.Repository.UserRepository.GetAll(Int32 pageIndex, Int32 pageSize) in E:\设计\Repository\UserRepository.cs:line 44
+   at Sys.Service.UserInformationService.GetAllInfo(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.Service\UserInformationService.cs:line 44
+   at Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.CoreApi\Controllers\UserInfoController.cs:line 83
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-04 15:18:52.6267|Sys.Common.NLogHelp|ERROR|
+【异常信息】：缺少对象或列名，或者对象或列名为空。对于 SELECT INTO 语句，请确保每列均具有名称。对于其他语句，请查找空的别名。不允许使用定义为 "" 或 [] 的别名。请将别名更改为有效名称。
+缺少对象或列名，或者对象或列名为空。对于 SELECT INTO 语句，请确保每列均具有名称。对于其他语句，请查找空的别名。不允许使用定义为 "" 或 [] 的别名。请将别名更改为有效名称。
+缺少对象或列名，或者对象或列名为空。对于 SELECT INTO 语句，请确保每列均具有名称。对于其他语句，请查找空的别名。不允许使用定义为 "" 或 [] 的别名。请将别名更改为有效名称。
+缺少对象或列名，或者对象或列名为空。对于 SELECT INTO 语句，请确保每列均具有名称。对于其他语句，请查找空的别名。不允许使用定义为 "" 或 [] 的别名。请将别名更改为有效名称。
+缺少对象或列名，或者对象或列名为空。对于 SELECT INTO 语句，请确保每列均具有名称。对于其他语句，请查找空的别名。不允许使用定义为 "" 或 [] 的别名。请将别名更改为有效名称。
+缺少对象或列名，或者对象或列名为空。对于 SELECT INTO 语句，请确保每列均具有名称。对于其他语句，请查找空的别名。不允许使用定义为 "" 或 [] 的别名。请将别名更改为有效名称。 
+【异常类型】：SqlException 
+【堆栈调用】：
+   at SqlSugar.AdoProvider.GetScalarAsync(String sql, SugarParameter[] parameters)
+   at SqlSugar.QueryableProvider`1.GetCountAsync()
+   at SqlSugar.QueryableProvider`1.CountAsync()
+   at SqlSugar.QueryableProvider`1.ToPageListAsync(Int32 pageIndex, Int32 pageSize, RefAsync`1 totalNumber)
+   at Sys.Repository.UserRepository.GetAll(Int32 pageIndex, Int32 pageSize) in E:\设计\Repository\UserRepository.cs:line 44
+   at Sys.Service.UserInformationService.GetAllInfo(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.Service\UserInformationService.cs:line 44
+   at Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(Int32 pageIndex, Int32 pageSize) in E:\设计\Sys.CoreApi\Controllers\UserInfoController.cs:line 83
+   at lambda_method(Closure , Object )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutorAwaitable.Awaiter.GetResult()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 

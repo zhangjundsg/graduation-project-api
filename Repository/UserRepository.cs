@@ -7,6 +7,7 @@ using Sys.Repository.DbHelper;
 using Sys.IRepository;
 using SqlSugar;
 using Sys.Model.DBModels;
+using Sys.Model;
 
 namespace Sys.Repository
 {
@@ -26,7 +27,7 @@ namespace Sys.Repository
                 Name = u.Name,
                 Email = u.Email,
                 RegisterTime = u.RegisterTime,
-                UserImg=u.UserImg,
+                UserImg = u.UserImg,
                 Role = r,
                 Department = d
             }).ToListAsync();
@@ -36,6 +37,25 @@ namespace Sys.Repository
         public List<Sys_User> IsSuccess(string UserName, string UserPwd)
         {
             return base.Context.Queryable<Sys_User>().Where(i => i.UserName == UserName && i.UserPassword == UserPwd).ToList();
+        }
+        public async Task<UserInfoAllPage> GetAll(int pageIndex,int pageSize)
+        {
+            RefAsync<int> total = 0;
+            var list = await base.Context.Queryable<Sys_User, Sys_Role, Sys_Department>((u, r, d)
+                       => new JoinQueryInfos(
+                           JoinType.Left, u.RoleID == r.RoleID,
+                           JoinType.Left, u.DepartmentID == d.DepartmentID
+                           )
+                 ).Select((u, r, d) => new UserAllInfo
+                 {
+                     UserID = u.UserID,
+                     Name = u.Name,
+                     RegisterTime = u.RegisterTime,
+                     RoleName = r.RoleName,
+                     DepartmentName = d.DepartmentName,
+                     Email = u.Email
+                 }).ToPageListAsync(pageIndex, pageSize, total);
+            return new UserInfoAllPage { list = list, PageCount = total };
         }
     }
 }

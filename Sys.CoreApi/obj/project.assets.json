@@ -2766,6 +2766,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.13",
           "Sys.Model": "1.0.0"
         },
         "compile": {

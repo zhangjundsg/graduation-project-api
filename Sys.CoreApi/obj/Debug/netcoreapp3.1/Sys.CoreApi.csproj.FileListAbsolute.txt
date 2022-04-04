@@ -40,7 +40,6 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-E:\设计\Sys.CoreApi\obj\Debug\netcoreapp3.1\Sys.CoreApi.MvcApplicationPartsAssemblyInfo.cs
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll

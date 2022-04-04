@@ -40,11 +40,11 @@ namespace Sys.CoreApi.Controllers
         {
             if (await _roleInformationService.AddRoleInfo(role))
             {
-                return Json(new { Code = ResponseCode.Success, Msg = "添加成功" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "添加成功" });
             }
             else
             {
-                return Json(new { Code = ResponseCode.CodeError, Msg = "添加失败" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "添加失败" });
             }
           
         }
@@ -58,11 +58,11 @@ namespace Sys.CoreApi.Controllers
         {
             if (await _roleInformationService.DeleteRoleInfo(RoleID))
             {
-                return Json(new { Code = ResponseCode.Success, Msg = "删除成功" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "删除成功" });
             }
             else
             {
-                return Json(new { Code = ResponseCode.CodeError, Msg = "删除失败，当前角色有关联数据！" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "删除失败，当前角色有关联数据！" });
             }
 
         }
@@ -77,11 +77,11 @@ namespace Sys.CoreApi.Controllers
 
             if (await _roleInformationService.DeleteRoleInfoList(list))
             {
-                return Json(new { Code = ResponseCode.Success, Msg = "删除成功" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "删除成功！" });
             }
             else
             {
-                return Json(new { Code = ResponseCode.CodeError, Msg = "删除失败！" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "删除失败！" });
             }
 
         }
@@ -95,11 +95,11 @@ namespace Sys.CoreApi.Controllers
         {
             if (await _roleInformationService.UpdateRoleInfo(role))
             {
-                return Json(new { Code = ResponseCode.Success, Msg = "更新成功" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "更新成功！" });
             }
             else
             {
-                return Json(new { Code = ResponseCode.CodeError, Msg = "更新失败" });
+                return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "更新失败！" });
             }
 
         }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sys.IService
 {
-    public interface ISendEmail
+    public interface ISendEmailService
     {
-        Task<string> SendEmailAsync(SendEmail sm);
+        Task<ResponseDto> SendEmailAsync(SendEmail sm);
     }
 }

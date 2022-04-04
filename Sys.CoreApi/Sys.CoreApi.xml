@@ -14,6 +14,11 @@
             验证码
             </summary>
         </member>
+        <member name="T:Sys.CoreApi.Controllers.FileUpLoadController">
+            <summary>
+            文件上传
+            </summary>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.MenuController">
             <summary>
             菜单
@@ -104,7 +109,7 @@
         </member>
         <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetDetailUserInformation(System.Int32)">
             <summary>
-            获取用户、角色、部门信息
+            根据ID获取用户、角色、部门信息
             </summary>
             <param name="id">用户id</param>
             <returns></returns>
@@ -118,6 +123,12 @@
         <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetUserEmailAll">
             <summary>
             获取全部用户邮箱
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(System.Int32,System.Int32)">
+            <summary>
+             获取用户所有信息
             </summary>
             <returns></returns>
         </member>

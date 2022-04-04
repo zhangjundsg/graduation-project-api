@@ -13,7 +13,7 @@ namespace Sys.Repository.DbHelper
             {
                 var db = new SqlSugarClient(new ConnectionConfig()
                 {
-                    ConnectionString = AppConfigurtaion.GetSectionValue("SqlServer"),
+                    ConnectionString = AppConfigurtaion.GetConfigStr("SqlServer"),
                     DbType = DbType.SqlServer,
                     IsAutoCloseConnection = true,
                     InitKeyType = InitKeyType.Attribute
