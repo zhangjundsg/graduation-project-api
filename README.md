@@ -4,7 +4,7 @@
 毕业设计
 
 #### 软件架构
-前端使用VUE+element
+前端使用VUE+element----文件（Sys_web）
 (vue-router,vuex,axios)
 后端使用.net core3.1
 (autofac,nlog,sqlsugar,swagger)
