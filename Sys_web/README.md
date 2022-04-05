@@ -1,19 +1,17 @@
 # Sys_web
 
-## Project setup
+## 安装依赖
 ```
-npm install
+npm install（需安装node.js）
 ```
 
-### Compiles and hot-reloads for development
+### 运行项目
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 构建项目
 ```
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
