@@ -138,7 +138,9 @@ export default {
           this.deleteRequest(
             "/api/RoleInfo/DelRoleInformation/?RoleID=" + data.roleID
           ).then((resp) => {
-            this.initRoleInfo();
+            if (resp) {
+              this.initRoleInfo();
+            }
           });
         })
         .catch(() => {
@@ -188,7 +190,9 @@ export default {
           });
           this.postRequest("/api/RoleInfo/DelRoleInformationArry/", list).then(
             (resp) => {
-              this.initRoleInfo();
+              if (resp) {
+                this.initRoleInfo();
+              }
             }
           );
         })

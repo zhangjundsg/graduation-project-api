@@ -1,4 +1,5 @@
-﻿using Sys.IRepository;
+﻿using Sys.Common;
+using Sys.IRepository;
 using Sys.IService;
 using Sys.Model;
 using Sys.Model.DBModels;
@@ -43,6 +44,28 @@ namespace Sys.Service
         {
             var list = await _user.GetAll(pageIndex,pageSize);
             return list;
+        }
+        public async Task<UserInfoAllPage> GetAllInfo(int pageIndex, int pageSize, string where)
+        {
+            var list= await _user.GetAll(pageIndex, pageSize, where);
+            return list;
+        }
+        public async Task<bool> AddUser(Sys_User user)
+        {
+            user.UserPassword = Md5Encrypt.Md5Enc(user.UserPassword);
+            return await _user.InsertAsync(user);
+        }
+        public async Task<bool> DelUser(int id)
+        {
+            return await _user.DeleteAsync(i => i.UserID == id);
+        }
+        public async Task<bool> UpdateUser(Sys_User user)
+        {
+            return await _user.UpdateAsync(user);
+        }
+        public async Task<bool> DelUserList(dynamic[] list)
+        {
+            return await _user.DeleteByIdsAsync(list);
         }
     }
 }

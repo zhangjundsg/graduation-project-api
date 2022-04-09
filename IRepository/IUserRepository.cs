@@ -12,5 +12,6 @@ namespace Sys.IRepository
         List<Sys_User> IsSuccess(string UserName,string UserPwd);
         Task<List<Sys_User>> GetUserInfo(int userID);
         Task<UserInfoAllPage> GetAll(int pageIndex, int pageSize);
+        Task<UserInfoAllPage> GetAll(int pageIndex, int pageSize,string name);
     }
 }

@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-tabs v-model="activeName" type="card">
-      <el-tab-pane label="详细资料" name="selfMana"
+      <el-tab-pane label="个人资料" name="selfMana"
         ><SelfMana></SelfMana
       ></el-tab-pane>
       <el-tab-pane label="常用功能" name="commonMana"

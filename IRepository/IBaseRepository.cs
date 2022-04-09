@@ -9,6 +9,6 @@ namespace Sys.IRepository
 {
     public interface IBaseRepository<T>:ISimpleClient<T> where T : class, new() 
     {
-
+      
     }
 }

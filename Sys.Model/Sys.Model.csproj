@@ -19,8 +19,4 @@
     <PackageReference Include="SqlSugarCore" Version="5.0.5.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DBModels\" />
-  </ItemGroup>
-
 </Project>

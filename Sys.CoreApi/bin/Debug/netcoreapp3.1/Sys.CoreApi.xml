@@ -14,6 +14,36 @@
             验证码
             </summary>
         </member>
+        <member name="T:Sys.CoreApi.Controllers.DepartmentController">
+            <summary>
+            部门信息
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.GetAllDepartment">
+            <summary>
+            获取所有部门信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.FiledOperateController">
+            <summary>
+            提交申请
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FiledOperateController.FiledOperate(Sys.Model.DBModels.Sys_FiledList)">
+            <summary>
+            提交申请
+            </summary>
+            <param name="filed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FiledOperateController.GetFiledList(System.Int32)">
+            <summary>
+            获取指定ID申请列表
+            </summary>
+            <param name="id">用户id</param>
+            <returns></returns>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.FileUpLoadController">
             <summary>
             文件上传
@@ -58,7 +88,7 @@
         </member>
         <member name="M:Sys.CoreApi.Controllers.RoleInfoController.GetRoleInformation">
             <summary>
-            获取角色信息
+            获取所有角色信息
             </summary>
             <returns></returns>
         </member>
@@ -128,8 +158,47 @@
         </member>
         <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(System.Int32,System.Int32)">
             <summary>
-             获取用户所有信息
+            分页查询
             </summary>
+            <param name="pageIndex">当前页</param>
+            <param name="pageSize">每页数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformationWhere(System.Int32,System.Int32,System.String)">
+            <summary>
+            按条件分页查询
+            </summary>
+            <param name="pageIndex">当前页</param>
+            <param name="pageSize">每页数据</param>
+            <param name="where">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.AddUserInformation(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="user">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.DelUser(System.Int32)">
+            <summary>
+            根据ID删除用户
+            </summary>
+            <param name="UserID">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.DelUserList(System.Object[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="list">id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUser(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            更新用户
+            </summary>
+            <param name="user">用户信息</param>
             <returns></returns>
         </member>
     </members>

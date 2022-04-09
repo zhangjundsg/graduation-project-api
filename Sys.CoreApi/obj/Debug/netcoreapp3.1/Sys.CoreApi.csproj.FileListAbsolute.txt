@@ -132,3 +132,4 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+E:\设计\Sys.CoreApi\obj\Debug\netcoreapp3.1\Sys.CoreApi.MvcApplicationPartsAssemblyInfo.cs

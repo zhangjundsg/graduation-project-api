@@ -70,12 +70,6 @@
           />
         </div>
         <div style="margin-top: 8px; margin-left: 50px">
-          加入时间：<el-tag size="small">{{ userInfo.registerTime }}</el-tag>
-        </div>
-        <div style="margin-top: 8px; margin-left: 50px">
-          邮箱地址：<el-tag size="small">{{ userInfo.email }}</el-tag>
-        </div>
-        <div style="margin-top: 8px; margin-left: 50px">
           职位标签：<el-tag size="small" type="success">{{
             role.roleName
           }}</el-tag>
@@ -89,6 +83,12 @@
           部门电话：<el-tag type="danger" size="small">{{
             department.departmentTel
           }}</el-tag>
+        </div>
+        <div style="margin-top: 8px; margin-left: 50px">
+          邮箱地址：<el-tag size="small">{{ userInfo.email }}</el-tag>
+        </div>
+        <div style="margin-top: 8px; margin-left: 50px">
+          加入时间：<el-tag size="small">{{ userInfo.registerTime }}</el-tag>
         </div>
       </el-card>
     </el-dialog>

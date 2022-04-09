@@ -44,6 +44,31 @@
             Nullable:True
             </summary>           
         </member>
+        <member name="P:Sys.Model.DBModels.Sys_FiledList.FiledType">
+            <summary>
+            申请类型 1.转岗 2.请假 3.离职
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_FiledList.FiledTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_FiledList.FiledStatus">
+            <summary>
+            申请状态 0:审核中 1.通过 2.拒绝
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_FiledList.FiledUserID">
+            <summary>
+            申请人id
+            </summary>
+        </member>
+        <member name="P:Sys.Model.DBModels.Sys_FiledList.FiledToRoleID">
+            <summary>
+            要转入的职位
+            </summary>
+        </member>
         <member name="T:Sys.Model.DBModels.Sys_Menu">
             <summary>
             

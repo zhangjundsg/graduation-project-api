@@ -246,3 +246,84 @@
 2022-04-04 15:23:05.8981 Info Adding target NullTarget(Name=blackhole)
 2022-04-04 15:23:05.9350 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
 2022-04-04 15:23:05.9441 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-05 12:30:24.5153 Info Message Template Auto Format enabled
+2022-04-05 12:30:24.5768 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-05 12:30:24.5768 Info Adding target NullTarget(Name=blackhole)
+2022-04-05 12:30:24.6029 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-05 12:30:24.6029 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-05 12:41:51.4029 Info AppDomain Shutting down. Logger closing...
+2022-04-05 12:41:51.4029 Info Logger has been shut down.
+2022-04-05 12:42:35.4185 Info Message Template Auto Format enabled
+2022-04-05 12:42:35.5164 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-05 12:42:35.5164 Info Adding target NullTarget(Name=blackhole)
+2022-04-05 12:42:35.5686 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-05 12:42:35.5686 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-05 15:56:00.3098 Info Message Template Auto Format enabled
+2022-04-05 15:56:00.4805 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-05 15:56:00.4805 Info Adding target NullTarget(Name=blackhole)
+2022-04-05 15:56:00.5709 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-05 15:56:00.5862 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-05 16:37:50.8946 Info Message Template Auto Format enabled
+2022-04-05 16:37:51.0537 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-05 16:37:51.0537 Info Adding target NullTarget(Name=blackhole)
+2022-04-05 16:37:51.2010 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-05 16:37:51.2149 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-05 17:40:22.3753 Info Message Template Auto Format enabled
+2022-04-05 17:40:22.4726 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-05 17:40:22.4786 Info Adding target NullTarget(Name=blackhole)
+2022-04-05 17:40:22.5475 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-05 17:40:22.5630 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-05 18:10:32.3942 Info Message Template Auto Format enabled
+2022-04-05 18:10:32.4799 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-05 18:10:32.4799 Info Adding target NullTarget(Name=blackhole)
+2022-04-05 18:10:32.5299 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-05 18:10:32.5397 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-05 18:24:34.8165 Info Message Template Auto Format enabled
+2022-04-05 18:24:34.9396 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-05 18:24:34.9396 Info Adding target NullTarget(Name=blackhole)
+2022-04-05 18:24:35.0054 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-05 18:24:35.0054 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-07 21:13:35.8814 Info Message Template Auto Format enabled
+2022-04-07 21:13:35.9259 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-07 21:13:35.9259 Info Adding target NullTarget(Name=blackhole)
+2022-04-07 21:13:35.9477 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-07 21:13:35.9477 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-07 21:14:29.2089 Info AppDomain Shutting down. Logger closing...
+2022-04-07 21:14:29.2089 Info Logger has been shut down.
+2022-04-07 21:36:32.5933 Info Message Template Auto Format enabled
+2022-04-07 21:36:32.6642 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-07 21:36:32.6642 Info Adding target NullTarget(Name=blackhole)
+2022-04-07 21:36:32.7026 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-07 21:36:32.7107 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-09 10:09:26.7254 Info Message Template Auto Format enabled
+2022-04-09 10:09:26.8309 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-09 10:09:26.8326 Info Adding target NullTarget(Name=blackhole)
+2022-04-09 10:09:26.8878 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-09 10:09:26.8980 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-09 14:59:54.1454 Info Message Template Auto Format enabled
+2022-04-09 14:59:54.2894 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-09 14:59:54.2894 Info Adding target NullTarget(Name=blackhole)
+2022-04-09 14:59:55.1026 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-09 14:59:55.1168 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-09 15:01:41.0088 Info Message Template Auto Format enabled
+2022-04-09 15:01:41.0839 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-09 15:01:41.0839 Info Adding target NullTarget(Name=blackhole)
+2022-04-09 15:01:41.1224 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-09 15:01:41.1224 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-09 15:28:07.5955 Info Message Template Auto Format enabled
+2022-04-09 15:28:07.7068 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-09 15:28:07.7082 Info Adding target NullTarget(Name=blackhole)
+2022-04-09 15:28:07.7693 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-09 15:28:07.7775 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-09 17:40:09.6144 Info Message Template Auto Format enabled
+2022-04-09 17:40:09.6905 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-09 17:40:09.6905 Info Adding target NullTarget(Name=blackhole)
+2022-04-09 17:40:09.7310 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-09 17:40:09.7393 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-09 19:35:20.6011 Info AppDomain Shutting down. Logger closing...
+2022-04-09 19:35:20.6373 Info Logger has been shut down.
+2022-04-09 19:57:45.6003 Info Message Template Auto Format enabled
+2022-04-09 19:57:45.6667 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-09 19:57:45.6667 Info Adding target NullTarget(Name=blackhole)
+2022-04-09 19:57:45.7151 Info Validating config: TargetNames=ownFile-web, ConfigItems=30, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-09 19:57:45.7269 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole

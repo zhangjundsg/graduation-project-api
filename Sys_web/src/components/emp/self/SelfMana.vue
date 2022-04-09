@@ -2,87 +2,69 @@
   <div>
     <el-card class="box-card" shadow="hover">
       <div style="text-align: center">
-        <img
-          :src="userinfo.userImg"
-          alt=""
-          srcset=""
-          title="点击更换头像"
-          class="imgFace"
-        />
+        <img :src="userinfo.userImg" alt="" srcset="" class="imgFace" />
       </div>
-      <div style="margin-top: 30px">
-        <div class="marginLe">
-          <div style="display: inline-block">
-            <el-tag type="success" effect="plain" size="small">姓名：</el-tag
-            ><el-tag size="small" class="mrLeft">{{ userinfo.name }}</el-tag>
-          </div>
-          <div style="display: inline-block; float: right">
+      <div style="margin-top: 40px">
+        <el-descriptions :column="3" size="small" border>
+          <el-descriptions-item>
+            <template slot="label">
+              <i class="el-icon-user"></i>
+              姓名
+            </template>
+            <el-tag size="small">{{ userinfo.name }}</el-tag>
+          </el-descriptions-item>
+          <el-descriptions-item>
+            <template slot="label">
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>
+              邮箱
+            </template>
+            <el-tag size="small">{{ userinfo.email }}</el-tag>
+          </el-descriptions-item>
+          <el-descriptions-item>
+            <template slot="label">
+              <i class="fa fa-address-card-o" aria-hidden="true"></i>
+              职位
+            </template>
             <el-tag
-              type="success"
-              effect="plain"
               size="small"
-              style="margin-right: 8px"
-              >部门：</el-tag
-            ><el-tag
-              size="small"
-              style="margin-right: 134px"
-              v-if="userinfo.department && userinfo.department.departmentName"
-              >{{ userinfo.department.departmentName }}</el-tag
-            >
-          </div>
-        </div>
-        <div style="margin-top: 15px" class="marginLe">
-          <div style="display: inline-block">
-            <el-tag type="success" effect="plain" size="small">职位：</el-tag
-            ><el-tag
-              size="small"
-              class="mrLeft"
               v-if="userinfo.role && userinfo.role.roleName"
               >{{ userinfo.role.roleName }}</el-tag
             >
-          </div>
-          <div style="display: inline-block; float: right">
+          </el-descriptions-item>
+          <el-descriptions-item>
+            <template slot="label">
+              <i class="fa fa-users" aria-hidden="true"></i>
+              部门
+            </template>
             <el-tag
-              type="success"
-              effect="plain"
               size="small"
-              style="margin-right: 15px"
-              >部门电话：</el-tag
-            ><el-tag
+              v-if="userinfo.department && userinfo.department.departmentName"
+              >{{ userinfo.department.departmentName }}</el-tag
+            >
+          </el-descriptions-item>
+          <el-descriptions-item>
+            <template slot="label">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              部门电话
+            </template>
+            <el-tag
               size="small"
-              style="margin-right: 122px"
               v-if="userinfo.department && userinfo.department.departmentTel"
               >{{ userinfo.department.departmentTel }}</el-tag
             >
-          </div>
-        </div>
-        <div style="margin-top: 15px" class="marginLe">
-          <div style="display: inline-block">
-            <el-tag type="success" effect="plain" size="small"
-              >个人邮箱：</el-tag
-            ><el-tag size="small" class="mrLeft">{{ userinfo.email }}</el-tag>
-          </div>
-          <div style="display: inline-block; float: right">
+          </el-descriptions-item>
+          <el-descriptions-item>
+            <template slot="label">
+              <i class="el-icon-office-building"></i>
+              部门邮箱
+            </template>
             <el-tag
-              type="success"
-              effect="plain"
               size="small"
-              style="margin-right: 15px"
-              >部门邮箱：</el-tag
-            ><el-tag
-              size="small"
-              style="margin-right: 70px"
               v-if="userinfo.department && userinfo.department.departmentEmail"
               >{{ userinfo.department.departmentEmail }}</el-tag
             >
-          </div>
-        </div>
-        <div style="margin-top: 15px" class="marginLe">
-          <el-tag type="success" effect="plain" size="small">加入时间：</el-tag
-          ><el-tag size="small" class="mrLeft">{{
-            userinfo.registerTime
-          }}</el-tag>
-        </div>
+          </el-descriptions-item>
+        </el-descriptions>
       </div>
     </el-card>
   </div>

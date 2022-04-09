@@ -21,7 +21,7 @@ namespace Sys.CoreApi.Controllers
             _roleInformationService = roleInformationService;
         }
         /// <summary>
-        /// 获取角色信息
+        /// 获取所有角色信息
         /// </summary>
         /// <returns></returns>
         [HttpGet]
