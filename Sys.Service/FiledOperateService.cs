@@ -1,5 +1,6 @@
 ﻿using Sys.IRepository;
 using Sys.IService;
+using Sys.Model;
 using Sys.Model.DBModels;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,21 @@ namespace Sys.Service
         {
             var list = await _filedOperate.AsQueryable().Where(i => i.FiledUserID == id).ToListAsync();
             return list;
+        }
+        public async Task<FiledList> GetAllFiled(int pageIndex, int pageSize)
+        {
+            var list = await _filedOperate.GetFileds(pageIndex, pageSize);
+            return list;
+        }
+        public async Task<FiledStats> Getstats()
+        {
+            var list=await _filedOperate.Getstats();
+            return list;
+        }
+
+        public async Task<bool> UpdataFiled(Sys_FiledList filed)
+        {
+            return await _filedOperate.UpdateAsync(filed);
         }
     }
 }

@@ -1,0 +1,54 @@
+2022-04-10 12:32:32.4732|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception 
+【异常类型】：LicenseException 
+【堆栈调用】：
+   at OfficeOpenXml.ExcelPackage.get_Workbook()
+   at OfficeOpenXml.ExcelPackage.CreateBlankWb()
+   at OfficeOpenXml.ExcelPackage.ConstructNewFile(String password)
+   at OfficeOpenXml.ExcelPackage..ctor()
+   at Sys.Common.ExcelHelper.CreateExcelFromList[T](List`1 dataList, List`1 headers) in E:\设计\Sys.Common\ExcelHelper.cs:line 20
+   at Sys.Service.FileUploadService.DownloadFile() in E:\设计\Sys.Service\FileUploadService.cs:line 67
+   at Sys.CoreApi.Controllers.FileUpLoadController.DownloadFile() in E:\设计\Sys.CoreApi\Controllers\FileUpLoadController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-10 12:32:58.2326|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception 
+【异常类型】：LicenseException 
+【堆栈调用】：
+   at OfficeOpenXml.ExcelPackage.get_Workbook()
+   at OfficeOpenXml.ExcelPackage.CreateBlankWb()
+   at OfficeOpenXml.ExcelPackage.ConstructNewFile(String password)
+   at OfficeOpenXml.ExcelPackage..ctor()
+   at Sys.Common.ExcelHelper.CreateExcelFromList[T](List`1 dataList, List`1 headers) in E:\设计\Sys.Common\ExcelHelper.cs:line 20
+   at Sys.Service.FileUploadService.DownloadFile() in E:\设计\Sys.Service\FileUploadService.cs:line 67
+   at Sys.CoreApi.Controllers.FileUpLoadController.DownloadFile() in E:\设计\Sys.CoreApi\Controllers\FileUpLoadController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-10 12:33:26.5478|Sys.Common.NLogHelp|ERROR|
+【异常信息】：Please set the ExcelPackage.LicenseContext property. See https://epplussoftware.com/developers/licenseexception 
+【异常类型】：LicenseException 
+【堆栈调用】：
+   at OfficeOpenXml.ExcelPackage.get_Workbook()
+   at OfficeOpenXml.ExcelPackage.CreateBlankWb()
+   at OfficeOpenXml.ExcelPackage.ConstructNewFile(String password)
+   at OfficeOpenXml.ExcelPackage..ctor()
+   at Sys.Common.ExcelHelper.CreateExcelFromList[T](List`1 dataList, List`1 headers) in E:\设计\Sys.Common\ExcelHelper.cs:line 20
+   at Sys.Service.FileUploadService.DownloadFile() in E:\设计\Sys.Service\FileUploadService.cs:line 67
+   at Sys.CoreApi.Controllers.FileUpLoadController.DownloadFile() in E:\设计\Sys.CoreApi\Controllers\FileUpLoadController.cs:line 57
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 

@@ -133,3 +133,7 @@ E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
 E:\设计\Sys.CoreApi\obj\Debug\netcoreapp3.1\Sys.CoreApi.MvcApplicationPartsAssemblyInfo.cs
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\EPPlus.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\Microsoft.IO.RecyclableMemoryStream.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Text.Encoding.CodePages.dll

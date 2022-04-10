@@ -160,6 +160,16 @@ namespace Sys.CoreApi.Controllers
             }
             return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "更新失败！" });
         }
-
+        /// <summary>
+        /// 更新用户角色
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
+        [HttpPut]
+        [Authorize]
+        public async Task<bool> UpdateUserRole(Sys_User user)
+        {
+            return await _user.UpdateUserRole(user);
+        }
     }
 }

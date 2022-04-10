@@ -276,7 +276,7 @@
           >
         </div>
         <div style="margin-top: 20px">
-          <span style="font-weight: bold">当前申请列表</span>
+          <span style="font-weight: bold">我的申请列表</span>
         </div>
         <div style="margin-top: 10px">
           <template>

@@ -45,6 +45,36 @@ namespace Sys.CoreApi.Controllers
             var list = await _filedOperate.GetFiledById(id);
             return Json(list);
         }
-
+        /// <summary>
+        /// 获取申请列表
+        /// </summary>
+        /// <param name="index">当前页</param>
+        /// <param name="pageSize">页大小</param>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<JsonResult> GetFiledListAll(int index,int pageSize)
+        {
+            var list = await _filedOperate.GetAllFiled(index, pageSize);
+            return Json(list);
+        }
+        /// <summary>
+        /// 获取申请统计
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<JsonResult> GetFiledStats()
+        {
+            var list = await _filedOperate.Getstats();
+            return Json(list);
+        }
+        [HttpPut]
+        public async Task<JsonResult> UpdateFiledStats(Sys_FiledList filed)
+        {
+            if (await _filedOperate.UpdataFiled(filed))
+            {
+                return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "已审核！" });
+            }
+            return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "审核失败" });
+        }
     }
 }

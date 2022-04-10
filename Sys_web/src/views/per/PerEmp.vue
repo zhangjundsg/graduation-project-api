@@ -21,6 +21,9 @@
         >
       </div>
       <div style="display: inline-block; float: right">
+        <el-button type="success" plain size="small" @click="downloadExecl()"
+          >导出数据</el-button
+        >
         <el-button type="success" plain size="small" @click="showDilog"
           >添加员工</el-button
         >
@@ -409,6 +412,9 @@ export default {
       } else {
         this.getUserInfo();
       }
+    },
+    downloadExecl() {
+      this.downloadRequest("/api/FileUpLoad/DownloadFile");
     },
   },
 };

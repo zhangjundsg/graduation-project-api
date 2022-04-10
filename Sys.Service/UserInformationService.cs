@@ -67,5 +67,9 @@ namespace Sys.Service
         {
             return await _user.DeleteByIdsAsync(list);
         }
+        public async Task<bool> UpdateUserRole(Sys_User user)
+        {
+            return await _user.AsUpdateable(user).UpdateColumns(i => new { i.RoleID }).Where(o => o.UserID == user.UserID).ExecuteCommandAsync() > 0;
+        }
     }
 }

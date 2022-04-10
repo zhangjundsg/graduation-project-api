@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Sys.Common;
+using Sys.IRepository;
 using Sys.IService;
 using Sys.Model;
 using System;
@@ -12,6 +13,11 @@ namespace Sys.Service
 {
     public class FileUploadService : IFileUploadService
     {
+        private readonly IUserRepository _userRepository;
+        public FileUploadService(IUserRepository userRepository)
+        {
+            _userRepository = userRepository;
+        }
         public async Task<ResponseDto> FileUpload(IFormFile file, string user)
         {
             var size = AppConfigurtaion.GetConfigStr("FileOptions:fileSize");
@@ -53,6 +59,12 @@ namespace Sys.Service
                     await file.CopyToAsync(stream);
                 }
             }
+        }
+        public async Task<byte[]> DownloadFile()
+        {
+            var data = await _userRepository.GetAll();
+            var listheader = new List<string> { "编号", "姓名", "加入时间", "邮箱", "职位", "部门" };
+            return ExcelHelper.CreateExcelFromList(data,listheader);
         }
     }
 }

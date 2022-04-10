@@ -283,6 +283,31 @@
             Nullable:False
             </summary>           
         </member>
+        <member name="P:Sys.Model.FiledOper.FiledType">
+            <summary>
+            申请类型 1.转岗 2.请假 3.离职
+            </summary>
+        </member>
+        <member name="P:Sys.Model.FiledOper.FiledTime">
+            <summary>
+            申请时间
+            </summary>
+        </member>
+        <member name="P:Sys.Model.FiledOper.FiledStatus">
+            <summary>
+            申请状态 0:审核中 1.通过 2.拒绝
+            </summary>
+        </member>
+        <member name="P:Sys.Model.FiledOper.FiledUserID">
+            <summary>
+            申请人id
+            </summary>
+        </member>
+        <member name="P:Sys.Model.FiledOper.FiledToRoleID">
+            <summary>
+            要转入的职位
+            </summary>
+        </member>
         <member name="P:Sys.Model.LoginRequestDto.UserName">
             <summary>
             账号

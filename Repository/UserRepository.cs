@@ -77,5 +77,24 @@ namespace Sys.Repository
                 }).ToPageListAsync(pageIndex, pageSize, total);
             return new UserInfoAllPage { list = list, PageCount = total };
         }
+        public async Task<List<UserAllInfo>> GetAll()
+        {
+            var list = await base.Context.Queryable<Sys_User, Sys_Role, Sys_Department>((u, r, d)
+                       => new JoinQueryInfos(
+                           JoinType.Left, u.RoleID == r.RoleID,
+                           JoinType.Left, u.DepartmentID == d.DepartmentID
+                           )
+                 )
+                .Select((u, r, d) => new UserAllInfo
+                {
+                    UserID = u.UserID,
+                    Name = u.Name,
+                    RegisterTime = u.RegisterTime,
+                    RoleName = r.RoleName,
+                    DepartmentName = d.DepartmentName,
+                    Email = u.Email
+                }).ToListAsync();
+            return list;
+        }
     }
 }

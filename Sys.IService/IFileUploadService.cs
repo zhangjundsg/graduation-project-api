@@ -9,5 +9,7 @@ namespace Sys.IService
     {
         Task<ResponseDto> FileUpload(IFormFile file,string user);
         Task TempFileUpload(IFormFile file);
+
+        Task<byte[]> DownloadFile();
     }
 }

@@ -25,16 +25,37 @@ namespace Sys.CoreApi.Controllers
         {
             _fileUpload = fileUpload;
         }
+        /// <summary>
+        /// 文件上传
+        /// </summary>
+        /// <param name="file"></param>
+        /// <param name="user"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<JsonResult> Upload(IFormFile file,string user)
         {
             var result = await _fileUpload.FileUpload(file, user);
             return Json(result);
         }
+        /// <summary>
+        /// 临时上传
+        /// </summary>
+        /// <param name="file"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task UploadTemp(IFormFile file)
         {
             await _fileUpload.TempFileUpload(file);
+        }
+        /// <summary>
+        /// 文件下载
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<IActionResult> DownloadFile()
+        {
+            var file = await _fileUpload.DownloadFile();
+            return File(file, "application/octet-stream","人员信息.xlsx");
         }
     }
 }
