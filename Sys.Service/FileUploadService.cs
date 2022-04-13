@@ -14,34 +14,40 @@ namespace Sys.Service
     public class FileUploadService : IFileUploadService
     {
         private readonly IUserRepository _userRepository;
-        public FileUploadService(IUserRepository userRepository)
+        private readonly IOptionsRepository _options;
+        public FileUploadService(IUserRepository userRepository, IOptionsRepository options)
         {
             _userRepository = userRepository;
+            _options = options;
         }
         public async Task<ResponseDto> FileUpload(IFormFile file, string user)
         {
-            var size = AppConfigurtaion.GetConfigStr("FileOptions:fileSize");
-            var fileType = AppConfigurtaion.GetConfigObj("FileOptions:fileType");
-            var filePath = Path.Combine(AppConfigurtaion.GetConfigObj("FileOptions:filePath"), user);
-            if (file.Length > Convert.ToInt64(size))
+            var options = await _options.AsQueryable().Where(i => i.OptionName == "IsFileUPdaload").ToListAsync();
+            var filesOptionsSize= await _options.AsQueryable().Where(i => i.OptionName == "FileSize").ToListAsync();
+            var filesOptionsSizeType = await _options.AsQueryable().Where(i => i.OptionName == "FileType").ToListAsync();
+            if (options[0].Enabled)
             {
-                return new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "文件过大！" };
-            }
-            if (!fileType.Contains(Path.GetExtension(file.FileName)))
-            {
-                return new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "类型错误！" };
-            }
-            if (file.Length > 0)
-            {
-                if (!Directory.Exists(filePath))
+                var filePath = Path.Combine(AppConfigurtaion.GetConfigObj("FileOptions:filePath"), user);
+                if (file.Length > Convert.ToInt64(filesOptionsSize[0].Parmars))
                 {
-                    Directory.CreateDirectory(filePath);
+                    return new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "文件过大！" };
                 }
-                using (var stream = File.Create(Path.Combine(filePath, file.FileName)))
+                if (!filesOptionsSizeType[0].Parmars.Contains(Path.GetExtension(file.FileName)))
                 {
-                    await file.CopyToAsync(stream);
+                    return new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "类型错误！" };
                 }
-                return new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "上传成功！" };
+                if (file.Length > 0)
+                {
+                    if (!Directory.Exists(filePath))
+                    {
+                        Directory.CreateDirectory(filePath);
+                    }
+                    using (var stream = File.Create(Path.Combine(filePath, file.FileName)))
+                    {
+                        await file.CopyToAsync(stream);
+                    }
+                    return new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "上传成功！" };
+                }
             }
             return new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "未知错误！" };
         }

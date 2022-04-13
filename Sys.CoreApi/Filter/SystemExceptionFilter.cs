@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
-using Sys.Common;
+using NLog;
 using Sys.Model;
 using System.Threading.Tasks;
 
@@ -10,6 +10,7 @@ namespace Sys.CoreApi.Filter
 {
     public class SystemExceptionFilter : IAsyncExceptionFilter
     {
+        public static Logger logger = LogManager.GetCurrentClassLogger();
         public Task OnExceptionAsync(ExceptionContext context)
         {
             if (context.ExceptionHandled == false)
@@ -20,7 +21,7 @@ namespace Sys.CoreApi.Filter
                     StatusCode = StatusCodes.Status200OK,
                     ContentType = "application/json;charset=utf-8"
                 };
-                NLogHelp.ErrorLog(context.Exception.Message, context.Exception);
+                logger.Error(context.Exception.Message);
             }
             context.ExceptionHandled = true;
             return Task.CompletedTask;

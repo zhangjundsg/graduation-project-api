@@ -34,6 +34,8 @@ axios.interceptors.response.use(success => {
     } else if (error.response.code == 401) {
         Message.error({ message: '未登录！' });
         router.replace('/');
+    } else if (error.response.code == 400) {
+        Message.error({ message: '请求参数错误！' });
     } else {
         if (error.response.data.msg) {
             Message.error({ message: error.response.data.msg });
@@ -58,7 +60,7 @@ export const putRequest = (url, params) => {
     return axios({
         method: 'put',
         url: `${base}${url}`,
-        data: params
+        data: params,
     })
 }
 

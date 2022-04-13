@@ -54,7 +54,11 @@
             </el-table-column>
             <el-table-column label="操作" width="250">
               <template slot-scope="scope">
-                <el-button size="mini">详细信息</el-button>
+                <el-button
+                  size="mini"
+                  @click="showPerDialog(scope.$index, scope.row)"
+                  >详细信息</el-button
+                >
                 <el-button
                   size="mini"
                   type="danger"
@@ -194,6 +198,12 @@
         }}</el-button>
       </span>
     </el-dialog>
+    <el-dialog title="详细资料" :visible.sync="PerDialog" width="40%">
+      <div>123</div>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="PerDialog = false" size="small">关闭</el-button>
+      </span>
+    </el-dialog>
   </div>
 </template>
 
@@ -204,6 +214,7 @@ export default {
     return {
       activeIndex: 0,
       dialogVisible: false,
+      PerDialog: false,
       searchPer: "",
       userInformation: [],
       pageIndex: 1,
@@ -232,6 +243,12 @@ export default {
     this.initDeptList();
   },
   methods: {
+    showPerDialog(index, data) {
+      console.log(index);
+      console.log(data);
+
+      this.PerDialog = true;
+    },
     prev() {
       if (this.activeIndex == 0) {
         return;

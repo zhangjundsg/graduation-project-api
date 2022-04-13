@@ -1,0 +1,23 @@
+2022-04-13 20:05:36.7896|Sys.Common.NLogHelp|ERROR|
+【异常信息】：这是一个错误 
+【异常类型】：Exception 
+【堆栈调用】：
+   at Sys.CoreApi.Controllers.UserInfoController.LoginOut() in E:\设计\Sys.CoreApi\Controllers\UserInfoController.cs:line 64
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted) 
+2022-04-13 20:07:29.0572|Sys.Common.NLogHelp|ERROR|这是一个错误 
+2022-04-13 20:12:13.5883|Sys.CoreApi.Filter.SystemExceptionFilter|ERROR|这是一个错误 
+2022-04-13 20:15:25.1585|Sys.CoreApi.Filter.SystemExceptionFilter|ERROR|这是一个错误 
+2022-04-13 20:15:25.4469|Sys.CoreApi.Filter.SystemExceptionFilter|DEBUG|这是一个错误 
+2022-04-13 22:13:43.6741|Sys.CoreApi.Filter.SystemExceptionFilter|ERROR|You cannot have no primary key and no conditions 
+2022-04-13 22:14:36.5661|Sys.CoreApi.Filter.SystemExceptionFilter|ERROR|You cannot have no primary key and no conditions 

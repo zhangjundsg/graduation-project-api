@@ -25,6 +25,27 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.AddDepartment(Sys.Model.DBModels.Sys_Department)">
+            <summary>
+            添加部门
+            </summary>
+            <param name="depart">部门信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.UpdateDepartment(Sys.Model.DBModels.Sys_Department)">
+            <summary>
+            更新部门信息
+            </summary>
+            <param name="depart">部门信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.DeleteDepartment(System.Int32)">
+            <summary>
+            删除部门
+            </summary>
+            <param name="id">部门ID</param>
+            <returns></returns>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.FiledOperateController">
             <summary>
             提交申请
@@ -84,6 +105,17 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Sys.CoreApi.Controllers.LogController">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.LogController.GetLogList(System.Int32,System.Int32)">
+            <summary>
+            获取所有日志
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.MenuController">
             <summary>
             菜单
@@ -114,6 +146,24 @@
             更新角色菜单
             </summary>
             <param name="menuDto">菜单数据及角色id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.OptionsController">
+            <summary>
+            系统配置
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.OptionsController.GetSysOptions">
+            <summary>
+            获取系统参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.OptionsController.UpdateSysOptions(Sys.Model.DBModels.Sys_Options)">
+            <summary>
+            修改系统参数
+            </summary>
+            <param name="options">参数</param>
             <returns></returns>
         </member>
         <member name="T:Sys.CoreApi.Controllers.RoleInfoController">

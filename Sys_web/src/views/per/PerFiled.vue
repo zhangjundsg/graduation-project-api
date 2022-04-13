@@ -153,7 +153,6 @@ export default {
         if (resp) {
           this.filedList = resp.fileList;
           this.PageCount = resp.totalPage;
-          console.log(resp);
         }
       });
     },
