@@ -24,16 +24,6 @@
           show-password
         ></el-input>
       </el-form-item>
-      <el-form-item prop="code">
-        <el-input
-          type="text"
-          v-model="loginForm.code"
-          auto-complete="false"
-          placeholder="点击图片切换验证码"
-          style="width: 200px; margin-right: 25px"
-        ></el-input>
-        <img :src="captchaUrl" @click="updateImg" />
-      </el-form-item>
       <el-checkbox v-model="checked" class="loginRemember">记住我</el-checkbox>
       <el-button type="primary" style="width: 100%" @click="submitLogin"
         >登录</el-button
@@ -51,10 +41,10 @@ export default {
       loginForm: {
         username: "",
         password: "",
-        code: "",
+        code: "asd123",
       },
       loading: false,
-      checked: true,
+      checked: false,
       rules: {
         username: [
           { required: true, message: "请输入账号！", trigger: "blur" },
@@ -62,11 +52,20 @@ export default {
         password: [
           { required: true, message: "请输入密码！", trigger: "blur" },
         ],
-        code: [{ required: true, message: "请输入验证码！", trigger: "blur" }],
       },
     };
   },
+  mounted() {
+    this.ischecked();
+  },
   methods: {
+    ischecked() {
+      if (window.localStorage.getItem("username")) {
+        this.loginForm.username = window.localStorage.getItem("username");
+        this.loginForm.password = window.localStorage.getItem("password");
+        this.checked = true;
+      }
+    },
     updateImg() {
       this.captchaUrl = "/api/Captcha?time=" + new Date();
     },
@@ -75,6 +74,13 @@ export default {
         this.loading = true;
         if (valid) {
           this.loading = false;
+          if (this.checked) {
+            window.localStorage.setItem("username", this.loginForm.username);
+            window.localStorage.setItem("password", this.loginForm.password);
+          } else {
+            window.localStorage.removeItem("username");
+            window.localStorage.removeItem("password");
+          }
           this.postRequest(
             "/api/Authentication/RequestToken",
             this.loginForm

@@ -161,6 +161,21 @@ namespace Sys.CoreApi.Controllers
             return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "更新失败！" });
         }
         /// <summary>
+        /// 更新用户密码
+        /// </summary>
+        /// <param name="user">用户信息</param>
+        /// <returns></returns>
+        [HttpPut]
+        [Authorize]
+        public async Task<JsonResult> UpdateUserPass(Sys_User user)
+        {
+            if (await _user.UpdateUserPassword(user))
+            {
+                return Json(new ResponseDto() { Code = (int)ResponseCode.Success, Msg = "更新成功！" });
+            }
+            return Json(new ResponseDto() { Code = (int)ResponseCode.CodeError, Msg = "更新失败！" });
+        }
+        /// <summary>
         /// 更新用户角色
         /// </summary>
         /// <param name="user">用户</param>
@@ -170,6 +185,39 @@ namespace Sys.CoreApi.Controllers
         public async Task<bool> UpdateUserRole(Sys_User user)
         {
             return await _user.UpdateUserRole(user);
+        }
+        /// <summary>
+        /// 更新用户部门
+        /// </summary>
+        /// <param name="user">用户</param>
+        /// <returns></returns>
+        [HttpPut]
+        [Authorize]
+        public async Task<bool> UpdateUserDepart(Sys_User user)
+        {
+            return await _user.UpdateUserDepart(user);
+        }
+        /// <summary>
+        /// 获取除当前用户外的其他用户信息
+        /// </summary>
+        /// <param name="id">当前用户id</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Authorize]
+        public async Task<JsonResult> GetOtherUser(int id)
+        {
+            var list = await _user.GetOtherUser(id);
+            return Json(list);
+        }
+        /// <summary>
+        /// 获取角色部门列表
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public async Task<JsonResult> GetRoleDepartList()
+        {
+            var list = await _user.GetRoleDepratList();
+            return Json(list);
         }
     }
 }

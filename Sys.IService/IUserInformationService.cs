@@ -18,7 +18,10 @@ namespace Sys.IService
         Task<bool> DelUser(int id);
         Task<bool> DelUserList(dynamic[] list);
         Task<bool> UpdateUser(Sys_User user);
-
         Task<bool> UpdateUserRole(Sys_User user);
+        Task<bool> UpdateUserDepart(Sys_User user);
+        Task<bool> UpdateUserPassword(Sys_User user);
+        Task<List<DepartUserDto>> GetOtherUser(int id);
+        Task<RoleDepartListDto> GetRoleDepratList();
     }
 }

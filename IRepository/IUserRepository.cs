@@ -14,5 +14,7 @@ namespace Sys.IRepository
         Task<UserInfoAllPage> GetAll(int pageIndex, int pageSize);
         Task<UserInfoAllPage> GetAll(int pageIndex, int pageSize,string name);
         Task<List<UserAllInfo>> GetAll();
+        Task<List<DepartUserDto>> GetAllOtherUser(int id);
+        Task<RoleDepartListDto> GetRoleDepratList();
     }
 }

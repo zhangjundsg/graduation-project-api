@@ -33,7 +33,6 @@ namespace Sys.Repository
             }).ToListAsync();
             return list;
         }
-
         public List<Sys_User> IsSuccess(string UserName, string UserPwd)
         {
             return base.Context.Queryable<Sys_User>().Where(i => i.UserName == UserName && i.UserPassword == UserPwd).ToList();
@@ -95,6 +94,30 @@ namespace Sys.Repository
                     Email = u.Email
                 }).ToListAsync();
             return list;
+        }
+        public async Task<List<DepartUserDto>> GetAllOtherUser(int id)
+        {
+            var list = await base.Context.Queryable<Sys_User, Sys_Role, Sys_Department>((u, r, d)
+                         => new JoinQueryInfos(
+                             JoinType.Left, u.RoleID == r.RoleID,
+                             JoinType.Left, u.DepartmentID == d.DepartmentID
+                             )
+                 ).Where(u => u.UserID != id)
+                 .Select((u, r, d) => new DepartUserDto
+                 {
+                     UserID = u.UserID,
+                     UserImg = u.UserImg,
+                     Name = u.Name,
+                     RoleName = r.RoleName,
+                     DepartName = d.DepartmentName
+                 }).ToListAsync();
+            return list;
+        }
+        public async Task<RoleDepartListDto> GetRoleDepratList()
+        {
+            var roleList = await base.Context.Queryable<Sys_Role>().Select(r => new Sys_Role { RoleID = r.RoleID, RoleName = r.RoleName }).ToListAsync();
+            var departList = await base.Context.Queryable<Sys_Department>().Select(d => new Sys_Department { DepartmentID = d.DepartmentID, DepartmentName = d.DepartmentName }).ToListAsync();
+            return new RoleDepartListDto { RoleList = roleList, DepartmentList = departList };
         }
     }
 }

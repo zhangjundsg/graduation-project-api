@@ -67,9 +67,28 @@ namespace Sys.Service
         {
             return await _user.DeleteByIdsAsync(list);
         }
+        public async Task<bool> UpdateUserPassword(Sys_User user)
+        {
+            user.UserPassword = Md5Encrypt.Md5Enc(user.UserPassword);
+            return await _user.AsUpdateable(user).UpdateColumns(i => new { i.UserPassword }).Where(o => o.UserID == user.UserID).ExecuteCommandAsync() > 0;
+        }
         public async Task<bool> UpdateUserRole(Sys_User user)
         {
             return await _user.AsUpdateable(user).UpdateColumns(i => new { i.RoleID }).Where(o => o.UserID == user.UserID).ExecuteCommandAsync() > 0;
+        }
+        public async Task<bool> UpdateUserDepart(Sys_User user)
+        {
+            return await _user.AsUpdateable(user).UpdateColumns(i => new { i.DepartmentID }).Where(o => o.UserID == user.UserID).ExecuteCommandAsync() > 0;
+        }
+        public async Task<List<DepartUserDto>> GetOtherUser(int id)
+        {
+            var list = await _user.GetAllOtherUser(id);
+            return list;
+        }
+        public async Task<RoleDepartListDto> GetRoleDepratList()
+        {
+            var list = await _user.GetRoleDepratList();
+            return list;
         }
     }
 }

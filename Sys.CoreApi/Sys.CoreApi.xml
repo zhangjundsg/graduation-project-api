@@ -9,11 +9,6 @@
             登录认证
             </summary>
         </member>
-        <member name="T:Sys.CoreApi.Controllers.CaptchaController">
-            <summary>
-            验证码
-            </summary>
-        </member>
         <member name="T:Sys.CoreApi.Controllers.DepartmentController">
             <summary>
             部门信息
@@ -205,9 +200,32 @@
             <param name="role">角色信息</param>
             <returns></returns>
         </member>
+        <member name="T:Sys.CoreApi.Controllers.SalaryController">
+            <summary>
+            工资账套接口
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.SalaryController.GetSalaryData">
+            <summary>
+            获取所有账套数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.SalaryController.UpdateSalary(Sys.Model.DBModels.Sys_Salary)">
+            <summary>
+            更新工资账套
+            </summary>
+            <param name="salary">账套</param>
+            <returns></returns>
+        </member>
         <member name="T:Sys.CoreApi.Controllers.SendEmailController">
             <summary>
             邮件发送
+            </summary>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.StatsDataController">
+            <summary>
+            统计数据接口
             </summary>
         </member>
         <member name="T:Sys.CoreApi.Controllers.UserInfoController">
@@ -286,11 +304,38 @@
             <param name="user">用户信息</param>
             <returns></returns>
         </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUserPass(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            更新用户密码
+            </summary>
+            <param name="user">用户信息</param>
+            <returns></returns>
+        </member>
         <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUserRole(Sys.Model.DBModels.Sys_User)">
             <summary>
             更新用户角色
             </summary>
             <param name="user">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUserDepart(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            更新用户部门
+            </summary>
+            <param name="user">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetOtherUser(System.Int32)">
+            <summary>
+            获取除当前用户外的其他用户信息
+            </summary>
+            <param name="id">当前用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetRoleDepartList">
+            <summary>
+            获取角色部门列表
+            </summary>
             <returns></returns>
         </member>
     </members>

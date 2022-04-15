@@ -38,6 +38,7 @@ namespace Sys.Service
 
         public async Task<bool> UpdataFiled(Sys_FiledList filed)
         {
+            filed.FiledTime = DateTime.Now;
             return await _filedOperate.UpdateAsync(filed);
         }
     }

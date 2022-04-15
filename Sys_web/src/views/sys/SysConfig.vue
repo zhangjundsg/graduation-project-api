@@ -125,7 +125,12 @@ export default {
         (resp) => {}
       );
       this.putRequest("/api/Options/UpdateSysOptions", fileType).then(
-        (resp) => {}
+        (resp) => {
+          this.$message({
+            type: "success",
+            message: "已更改",
+          });
+        }
       );
     },
   },
