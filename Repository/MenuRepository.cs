@@ -17,13 +17,12 @@ namespace Sys.Repository
 
         public async Task<List<Sys_Menu>> MenuInfo(int UserID)
         {
-            var list = await base.Context.Queryable<Sys_User, Sys_UserRole, Sys_Role, Sys_RoleMenu, Sys_Menu>((u, ur, r, rm, m)
-                  => u.UserID == ur.UserID
-                  && ur.RoleID == r.RoleID
+            var list = await base.Context.Queryable<Sys_User, Sys_Role, Sys_RoleMenu, Sys_Menu>((u, r, rm, m)
+                  => u.RoleID == r.RoleID
                   && r.RoleID == rm.RoleID
                   && rm.MenuID == m.MenuID)
                 .Where(u => u.UserID == UserID)
-                .Select((u, ur, r, rm, m) => new Sys_Menu
+                .Select((u, r, rm, m) => new Sys_Menu
                 {
                     MenuID = m.MenuID,
                     MenuPath = m.MenuPath,

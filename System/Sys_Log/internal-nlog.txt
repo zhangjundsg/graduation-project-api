@@ -705,3 +705,97 @@ Error Number:2628,State:1,Class:16
 2022-04-16 01:07:49.2787 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
 2022-04-16 01:08:20.2569 Info AppDomain Shutting down. Logger closing...
 2022-04-16 01:08:20.2712 Info Logger has been shut down.
+2022-04-16 01:20:19.3143 Info Message Template Auto Format enabled
+2022-04-16 01:20:19.3640 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 01:20:19.3640 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 01:20:19.3640 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 01:20:19.4051 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 01:20:19.4114 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 01:21:29.1596 Info AppDomain Shutting down. Logger closing...
+2022-04-16 01:21:29.1675 Info Logger has been shut down.
+2022-04-16 01:21:37.2788 Info Message Template Auto Format enabled
+2022-04-16 01:21:37.3192 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 01:21:37.3192 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 01:21:37.3192 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 01:21:37.3486 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 01:21:37.3486 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 01:42:29.1950 Info AppDomain Shutting down. Logger closing...
+2022-04-16 01:42:29.1950 Info Logger has been shut down.
+2022-04-16 01:51:10.2566 Info Message Template Auto Format enabled
+2022-04-16 01:51:10.3041 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 01:51:10.3041 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 01:51:10.3041 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 01:51:10.3423 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 01:51:10.3423 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 01:55:08.8468 Info AppDomain Shutting down. Logger closing...
+2022-04-16 01:55:08.8539 Info Logger has been shut down.
+2022-04-16 01:55:49.0189 Info Message Template Auto Format enabled
+2022-04-16 01:55:49.0612 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 01:55:49.0612 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 01:55:49.0703 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 01:55:49.0950 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 01:55:49.1015 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 01:58:41.4467 Info AppDomain Shutting down. Logger closing...
+2022-04-16 01:58:41.4467 Info Logger has been shut down.
+2022-04-16 01:59:47.2952 Info Message Template Auto Format enabled
+2022-04-16 01:59:47.3411 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 01:59:47.3411 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 01:59:47.3499 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 01:59:47.3735 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 01:59:47.3821 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 02:04:20.6030 Info AppDomain Shutting down. Logger closing...
+2022-04-16 02:04:20.6030 Info Logger has been shut down.
+2022-04-16 02:04:26.0002 Info Message Template Auto Format enabled
+2022-04-16 02:04:26.0422 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 02:04:26.0422 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 02:04:26.0532 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 02:04:26.0743 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 02:04:26.0743 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 02:15:10.3705 Info AppDomain Shutting down. Logger closing...
+2022-04-16 02:15:10.3705 Info Logger has been shut down.
+2022-04-16 02:18:46.3871 Info Message Template Auto Format enabled
+2022-04-16 02:18:46.4238 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 02:18:46.4238 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 02:18:46.4317 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 02:18:46.4518 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 02:18:46.4577 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 02:39:45.8105 Info AppDomain Shutting down. Logger closing...
+2022-04-16 02:39:45.8370 Info Logger has been shut down.
+2022-04-16 02:44:26.1243 Info Message Template Auto Format enabled
+2022-04-16 02:44:26.1734 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 02:44:26.1734 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 02:44:26.1862 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 02:44:26.2149 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\WebIIS\SystemApiCore\NlogOptions.config
+2022-04-16 02:44:26.2236 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 02:56:42.4781 Info Message Template Auto Format enabled
+2022-04-16 02:56:42.5789 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 02:56:42.5789 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 02:56:42.6100 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 02:56:42.6566 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-16 02:56:42.6657 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 02:57:25.8032 Info AppDomain Shutting down. Logger closing...
+2022-04-16 02:57:25.8032 Info Logger has been shut down.
+2022-04-16 02:57:41.7537 Info Message Template Auto Format enabled
+2022-04-16 02:57:41.8209 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 02:57:41.8209 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 02:57:41.8370 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 02:57:41.8758 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-16 02:57:41.8850 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 12:50:19.0055 Info Message Template Auto Format enabled
+2022-04-16 12:50:19.3000 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 12:50:19.3000 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 12:50:19.3578 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 12:50:19.4520 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=C:\Users\zhang\Desktop\新建文件夹\graduation-project-api-master\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-16 12:50:19.4699 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 13:11:58.0555 Info Message Template Auto Format enabled
+2022-04-16 13:11:58.1254 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 13:11:58.1254 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 13:11:58.1455 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 13:11:58.1869 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=E:\设计\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-16 13:11:58.1963 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole
+2022-04-16 13:20:24.3722 Info Message Template Auto Format enabled
+2022-04-16 13:20:24.4564 Info Adding target FileTarget(Name=ownFile-web)
+2022-04-16 13:20:24.4564 Info Adding target NullTarget(Name=blackhole)
+2022-04-16 13:20:24.4768 Info Adding target DatabaseTarget(Name=database)
+2022-04-16 13:20:24.5251 Info Validating config: TargetNames=ownFile-web, database, ConfigItems=61, FilePath=C:\Users\zhang\Desktop\新建文件夹\后端\Sys.CoreApi\bin\Debug\netcoreapp3.1\NlogOptions.config
+2022-04-16 13:20:24.5354 Warn Unused target detected. Add a rule for this target to the configuration. TargetName: blackhole

@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sys.CoreApi</name>
+    </assembly>
+    <members>
+        <member name="T:Sys.CoreApi.Controllers.AuthenticationController">
+            <summary>
+            登录认证
+            </summary>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.DepartmentController">
+            <summary>
+            部门信息
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.GetAllDepartment">
+            <summary>
+            获取所有部门信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.AddDepartment(Sys.Model.DBModels.Sys_Department)">
+            <summary>
+            添加部门
+            </summary>
+            <param name="depart">部门信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.UpdateDepartment(Sys.Model.DBModels.Sys_Department)">
+            <summary>
+            更新部门信息
+            </summary>
+            <param name="depart">部门信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.DepartmentController.DeleteDepartment(System.Int32)">
+            <summary>
+            删除部门
+            </summary>
+            <param name="id">部门ID</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.FiledOperateController">
+            <summary>
+            提交申请
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FiledOperateController.FiledOperate(Sys.Model.DBModels.Sys_FiledList)">
+            <summary>
+            提交申请
+            </summary>
+            <param name="filed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FiledOperateController.GetFiledList(System.Int32)">
+            <summary>
+            获取指定ID申请列表
+            </summary>
+            <param name="id">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FiledOperateController.GetFiledListAll(System.Int32,System.Int32)">
+            <summary>
+            获取申请列表
+            </summary>
+            <param name="index">当前页</param>
+            <param name="pageSize">页大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FiledOperateController.GetFiledStats">
+            <summary>
+            获取申请统计
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.FileUpLoadController">
+            <summary>
+            文件上传
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FileUpLoadController.Upload(Microsoft.AspNetCore.Http.IFormFile,System.String)">
+            <summary>
+            文件上传
+            </summary>
+            <param name="file"></param>
+            <param name="user"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FileUpLoadController.UploadTemp(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            临时上传
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.FileUpLoadController.DownloadFile">
+            <summary>
+            文件下载
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.LogController">
+            <summary>
+            日志接口
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.LogController.GetLogList(System.Int32,System.Int32)">
+            <summary>
+            获取所有日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.MenuController">
+            <summary>
+            菜单
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.GetMenuList(System.Int32)">
+            <summary>
+            根据用户ID获取菜单
+            </summary>
+            <param name="id">用户ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.GetAllMenuList">
+            <summary>
+            获取所有菜单
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.GetMenuArray(System.Int32)">
+            <summary>
+            根据角色ID获取菜单数组
+            </summary>
+            <param name="roleID">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.MenuController.UpdateMenu(Sys.Model.UpdateMenuDto)">
+            <summary>
+            更新角色菜单
+            </summary>
+            <param name="menuDto">菜单数据及角色id</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.OptionsController">
+            <summary>
+            系统配置
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.OptionsController.GetSysOptions">
+            <summary>
+            获取系统参数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.OptionsController.UpdateSysOptions(Sys.Model.DBModels.Sys_Options)">
+            <summary>
+            修改系统参数
+            </summary>
+            <param name="options">参数</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.RoleInfoController">
+            <summary>
+            角色信息
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.GetRoleInformation">
+            <summary>
+            获取所有角色信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.AddRoleInformation(Sys.Model.DBModels.Sys_Role)">
+            <summary>
+            添加角色信息
+            </summary>
+            <param name="role">信息内容</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.DelRoleInformation(System.Int32)">
+            <summary>
+            删除单个角色
+            </summary>
+            <param name="RoleID">角色ID</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.DelRoleInformationArry(System.Int32[])">
+            <summary>
+            删除多个角色
+            </summary>
+            <param name="list">角色ID数组</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.RoleInfoController.UpdateRoleInformation(Sys.Model.DBModels.Sys_Role)">
+            <summary>
+            更新角色信息
+            </summary>
+            <param name="role">角色信息</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.SalaryController">
+            <summary>
+            工资账套接口
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.SalaryController.GetSalaryData">
+            <summary>
+            获取所有账套数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.SalaryController.UpdateSalary(Sys.Model.DBModels.Sys_Salary)">
+            <summary>
+            更新工资账套
+            </summary>
+            <param name="salary">账套</param>
+            <returns></returns>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.SendEmailController">
+            <summary>
+            邮件发送
+            </summary>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.StatsDataController">
+            <summary>
+            统计数据接口
+            </summary>
+        </member>
+        <member name="T:Sys.CoreApi.Controllers.UserInfoController">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetUserInformation(System.Int32)">
+            <summary>
+            获取用户信息
+            </summary>
+            <param name="id">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetDetailUserInformation(System.Int32)">
+            <summary>
+            根据ID获取用户、角色、部门信息
+            </summary>
+            <param name="id">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.LoginOut">
+            <summary>
+            注销登录
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetUserEmailAll">
+            <summary>
+            获取全部用户邮箱
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformation(System.Int32,System.Int32)">
+            <summary>
+            分页查询
+            </summary>
+            <param name="pageIndex">当前页</param>
+            <param name="pageSize">每页数据</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetAllUserInformationWhere(System.Int32,System.Int32,System.String)">
+            <summary>
+            按条件分页查询
+            </summary>
+            <param name="pageIndex">当前页</param>
+            <param name="pageSize">每页数据</param>
+            <param name="where">条件</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.AddUserInformation(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            添加用户
+            </summary>
+            <param name="user">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.DelUser(System.Int32)">
+            <summary>
+            根据ID删除用户
+            </summary>
+            <param name="UserID">用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.DelUserList(System.Object[])">
+            <summary>
+            批量删除
+            </summary>
+            <param name="list">id列表</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUser(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            更新用户
+            </summary>
+            <param name="user">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUserPass(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            更新用户密码
+            </summary>
+            <param name="user">用户信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUserRole(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            更新用户角色
+            </summary>
+            <param name="user">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.UpdateUserDepart(Sys.Model.DBModels.Sys_User)">
+            <summary>
+            更新用户部门
+            </summary>
+            <param name="user">用户</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetOtherUser(System.Int32)">
+            <summary>
+            获取除当前用户外的其他用户信息
+            </summary>
+            <param name="id">当前用户id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Sys.CoreApi.Controllers.UserInfoController.GetRoleDepartList">
+            <summary>
+            获取角色部门列表
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

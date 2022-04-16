@@ -1,0 +1,11 @@
+E:\设计\Sys.Model\bin\Release\netcoreapp3.1\Sys.Model.deps.json
+E:\设计\Sys.Model\bin\Release\netcoreapp3.1\Sys.Model.dll
+E:\设计\Sys.Model\bin\Release\netcoreapp3.1\Sys.Model.pdb
+E:\设计\Sys.Model\bin\Release\netcoreapp3.1\Sys.Model.xml
+E:\设计\Sys.Model\obj\Release\netcoreapp3.1\Sys.Model.csproj.AssemblyReference.cache
+E:\设计\Sys.Model\obj\Release\netcoreapp3.1\Sys.Model.GeneratedMSBuildEditorConfig.editorconfig
+E:\设计\Sys.Model\obj\Release\netcoreapp3.1\Sys.Model.AssemblyInfoInputs.cache
+E:\设计\Sys.Model\obj\Release\netcoreapp3.1\Sys.Model.AssemblyInfo.cs
+E:\设计\Sys.Model\obj\Release\netcoreapp3.1\Sys.Model.csproj.CoreCompileInputs.cache
+E:\设计\Sys.Model\obj\Release\netcoreapp3.1\Sys.Model.dll
+E:\设计\Sys.Model\obj\Release\netcoreapp3.1\Sys.Model.pdb

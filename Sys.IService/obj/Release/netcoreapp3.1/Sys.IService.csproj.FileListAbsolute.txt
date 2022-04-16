@@ -1,0 +1,14 @@
+E:\设计\Sys.IService\bin\Release\netcoreapp3.1\Sys.IService.deps.json
+E:\设计\Sys.IService\bin\Release\netcoreapp3.1\Sys.IService.dll
+E:\设计\Sys.IService\bin\Release\netcoreapp3.1\Sys.IService.pdb
+E:\设计\Sys.IService\bin\Release\netcoreapp3.1\Sys.Model.dll
+E:\设计\Sys.IService\bin\Release\netcoreapp3.1\Sys.Model.pdb
+E:\设计\Sys.IService\bin\Release\netcoreapp3.1\Sys.Model.xml
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.csproj.AssemblyReference.cache
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.GeneratedMSBuildEditorConfig.editorconfig
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.AssemblyInfoInputs.cache
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.AssemblyInfo.cs
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.csproj.CoreCompileInputs.cache
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.csproj.CopyComplete
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.dll
+E:\设计\Sys.IService\obj\Release\netcoreapp3.1\Sys.IService.pdb
